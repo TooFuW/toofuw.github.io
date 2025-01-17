@@ -11,8 +11,6 @@ header {
     padding-bottom: 10px;
     padding-left: 50px;
     padding-right: 50px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
 nav {
@@ -30,36 +28,31 @@ nav ul {
 
 a {
     font-size: 20px;
-    color: white;
+    color: yellow;
     font-weight: bold;
     text-decoration: none;
-    position: relative;
+}
+
+nav a {
+    color: white;
 }
 
 a:hover {
-    text-decoration: underline rgb(250, 255, 0);
+    text-decoration: underline yellow;
     text-decoration-thickness: 2px;
 }
 
-div.separator {
-    border: solid 1px;
-    width: 50%;
-    margin-left: 25%;
+main {
+    padding: 20px;
 }
 
 div#title {
     text-align: center;
-    padding: 20px;
 }
 
 img#icon {
-    width: 100px;
+    width: 150px;
     border-radius: 100%;
-}
-
-div#about {
-    text-align: center;
-    padding: 20px;
 }
 
 ul.tools {
@@ -67,35 +60,35 @@ ul.tools {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
     padding: 0px;
 }
 
 img.tools {
-    width: 30px;
+    max-width: 30px;
+    max-height: 30px;
 }
 
-h1#projects_title {
-    padding-left: 20px;
-    padding-right: 20px;
+h1.projects_title a {
+    font-size: 30px;
 }
 
 div.project {
     border: solid 1px white;
     border-radius: 10px;
-    margin: 20px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
 }
 
 div.project img {
-    width: 145px;
-    height: 145px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 div.project div.content {
     padding: 10px;
 }
+
