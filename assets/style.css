@@ -7,23 +7,15 @@ body {
 
 header {
     background-color: rgb(30, 30, 30);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 30px;
+    gap: 10px;
 }
 
 a {
@@ -55,6 +47,11 @@ img#icon {
     border-radius: 100%;
 }
 
+div#about h3 {
+    text-decoration: underline yellow;
+    text-decoration-thickness: 2px;
+}
+
 ul.tools {
     list-style: none;
     display: flex;
@@ -79,6 +76,8 @@ div.project {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
 }
 
 div.project img {
@@ -92,3 +91,6 @@ div.project div.content {
     padding: 10px;
 }
 
+a.project_info {
+    font-size: 15px;
+}
