@@ -271,4 +271,10 @@ hr {
         text-align: center;
         padding: 0px;
     }
+
+    ul:not(.tools) {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
 }
