@@ -180,10 +180,6 @@ img.tools {
     transition: var(--transition);
 }
 
-img.tools:hover {
-    filter: grayscale(0%);
-}
-
 /* Page projets */
 h1.projects_title {
     font-size: 29px;
@@ -214,7 +210,7 @@ div.project:hover {
     box-shadow: 0 10px 15px rgba(255, 230, 0, 0.3);
 }
 
-div.project img {
+div.project > img {
     height: 120px;
     width: 120px;
     object-fit: cover;
