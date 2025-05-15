@@ -6,7 +6,7 @@
     --text-muted: #cccccc;
     --accent: #ffcc00;
     --border-radius: 8px;
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    --box-shadow: 0 4px 6px rgba(255, 230, 0, 0.2);
     --transition: all 0.3s ease;
 }
 
@@ -208,12 +208,12 @@ div.project {
 
 div.project:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 15px rgba(255, 230, 0, 0.3);
 }
 
 div.project img {
-    width: 120px;
     height: 120px;
+    width: 120px;
     object-fit: cover;
     border-radius: 0;
     margin: 0;
@@ -223,11 +223,14 @@ div.project div.content {
     padding-left: 24px;
 }
 
-div.project a {
+div.project a.project_name {
     font-size: 18px;
+}
+
+div.project a {
+    font-size: 16px;
     color: var(--accent);
     margin-bottom: 8px;
-    display: inline-block;
 }
 
 div.project p {
@@ -248,4 +251,21 @@ hr {
     height: 1px;
     background: var(--accent);
     margin: 40px 0;
+}
+
+@media (max-width: 700px) {
+    div.project {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    div.project img {
+        height: 80px;
+        width: 80px;
+    }
+
+    div.project div.content {
+        text-align: center;
+        padding: 0px;
+    }
 }
