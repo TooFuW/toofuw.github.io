@@ -154,26 +154,29 @@ div#about hr {
     margin: 24px 0;
 }
 
-ul.tools {
+ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    margin-bottom: 24px;
+    margin: 10px 0 0 0;
 }
 
-ul.tools li {
+ul.tools {
+    margin: 0 0 10px 0;
+}
+
+ul li {
     transition: var(--transition);
 }
 
-ul.tools li:hover {
+ul li:hover {
     transform: translateY(-5px);
 }
 
 img.tools {
     max-width: 40px;
     max-height: 40px;
-    filter: grayscale(20%);
     transition: var(--transition);
 }
 
