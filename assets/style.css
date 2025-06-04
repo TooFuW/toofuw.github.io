@@ -199,7 +199,7 @@ div.project {
     border-radius: var(--border-radius);
     margin-bottom: 24px;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     box-shadow: var(--box-shadow);
     overflow: hidden;
     transition: var(--transition);
@@ -211,15 +211,13 @@ div.project:hover {
 }
 
 div.project > img {
-    height: 120px;
-    width: 120px;
+    width: 150px;
     object-fit: cover;
-    border-radius: 0;
-    margin: 0;
 }
 
 div.project div.content {
-    padding-left: 24px;
+    align-content: center;
+    padding: 10px 24px;
 }
 
 div.project a.project_name {
@@ -254,18 +252,20 @@ hr {
 
 @media (max-width: 700px) {
     div.project {
+        align-items: center;
         flex-direction: column;
         padding: 10px;
     }
 
-    div.project img {
+    div.project > img {
         height: 80px;
         width: 80px;
+        border-radius: var(--border-radius);
     }
 
     div.project div.content {
         text-align: center;
-        padding: 0px;
+        padding: 5px 0 0 0;
     }
 
     ul:not(.tools) {
