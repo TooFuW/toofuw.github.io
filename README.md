@@ -1,3 +1,3 @@
 # toofuw.github.io
 
-My portofolio/website
+My portfolio/website
