@@ -167,6 +167,8 @@ ul.tools {
 }
 
 ul li {
+    display: flex;
+    align-items: center;
     transition: var(--transition);
 }
 
