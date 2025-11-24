@@ -30,14 +30,19 @@ div#title {
     color: #000;
 }
 
+#under_construction {
+    position: absolute;
+    top: 10px;
+}
+
 img#icon {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     margin-left: 10px;
-    border: 3px solid var(--accent);
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
+    border: 3px solid #000000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
 }
 
 img#icon:hover {
@@ -72,6 +77,10 @@ div#title_content {
 /* Section à propos */
 div#about {
     background-color: #ffcc00;
+}
+
+div#about,
+div#skills {
     border-radius: 100px 100px 0 0;
     color: #000;
     display: flex;
@@ -80,15 +89,20 @@ div#about {
 }
 
 div#about_nav {
+    background-color: #ffff8f;
+}
+
+div#about_nav,
+div#skills_nav {
     display: flex;
     gap: 50px;
-    background-color: #ffff8f;
     padding: 5px;
     border-radius: 50px;
     margin-top: 10dvh;
 }
 
-div.about_nav_button {
+div.about_nav_button,
+div.skills_nav_button {
     color: #000000;
     padding: 10px 50px;
     border-radius: 45px;
@@ -97,12 +111,14 @@ div.about_nav_button {
     transition: all 0.3s ease;
 }
 
-div.about_nav_button.selected {
+div.about_nav_button.selected,
+div.skills_nav_button.selected {
     background-color: #000000;
     color: #ffffff;
 }
 
-div#about_content_div {
+div#about_content_div,
+div#skills_content_div {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -110,25 +126,33 @@ div#about_content_div {
 }
 
 div#about_content_div,
-div#about_content_div * {
+div#about_content_div *,
+div#skills_content_div,
+div#skills_content_div * {
     transition: all 0.3s ease;
 }
 
-div.about_content {
+div.about_content,
+div.skills_content {
     width: 80%;
     max-width: 0;
 }
 
-div.about_content * {
+div.about_content *,
+div.skills_content * {
     font-size: 0;
 }
 
-div.about_content.selected {
-    max-width: 800px;
+div.about_content.selected,
+div.skills_content.selected {
+    max-width: 900px;
 }
 
-div.about_content.selected h3 {
-    font-size: 21px;
+div.about_content.selected h3,
+div.skills_content.selected h3 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 div.about_content.selected p {
@@ -138,4 +162,45 @@ div.about_content.selected p {
 div.about_content.selected span {
     font-size: 16px;
     font-weight: 700;
+}
+
+/* Section compétences */
+div#skills {
+    background-color: #00ff00;
+}
+
+div#skills_nav {
+    background-color: #8fff8f;
+}
+
+ul.tools {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+ul.tools li {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+ul.tools li:hover {
+    transform: translateY(-5px);
+}
+
+img.tools {
+    height: 64px;
+    max-width: 0px;
+    max-height: 0px;
+}
+
+.skills_content.selected img.tools {
+    max-width: 100%;
+    max-height: 64px;
+    transition: all 0.3s ease;
 }

@@ -1,36 +1,35 @@
-window.addEventListener("DOMContentLoaded", (event) => {
-    const buttons = document.querySelectorAll('.about_nav_button');
-    const aboutContent = document.getElementById('about_content');
-    const goal = document.getElementById("about_goal");
-    const hobbies = document.getElementById("about_hobbies");
-    const languages = document.getElementById("about_languages");
-    buttons.forEach(button => {
-        button.addEventListener('mouseover', () => {
-            button.classList.add('selected');
-            buttons.forEach(otherButton => {
-                if (otherButton !== button) {
-                    otherButton.classList.remove('selected');
+window.addEventListener("DOMContentLoaded", () => {
+    const navGroups = [
+        {
+            buttonSelector: '#about_nav .about_nav_button',
+            contentClass: '.about_content'
+        },
+        {
+            buttonSelector: '#skills_nav .skills_nav_button',
+            contentClass: '.skills_content'
+        }
+    ];
+
+    navGroups.forEach(({ buttonSelector, contentClass }) => {
+        const buttons = document.querySelectorAll(buttonSelector);
+        const contents = document.querySelectorAll(contentClass);
+
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                buttons.forEach(otherButton => otherButton.classList.remove('selected'));
+                button.classList.add('selected');
+                contents.forEach(section => section.classList.remove('selected'));
+
+                const targetId = button.dataset.target;
+                if (!targetId) {
+                    return;
+                }
+
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.add('selected');
                 }
             });
-            switch (button.getAttribute('id')) {
-                case 'goal':
-                    goal.classList.add('selected');
-                    hobbies.classList.remove('selected');
-                    languages.classList.remove('selected');
-                    break;
-                case 'hobbies':
-                    goal.classList.remove('selected');
-                    hobbies.classList.add('selected');
-                    languages.classList.remove('selected');
-                    break;
-                case 'languages':
-                    goal.classList.remove('selected');
-                    hobbies.classList.remove('selected');
-                    languages.classList.add('selected');
-                    break;
-                default:
-                    break;
-            }
         });
     });
 });
