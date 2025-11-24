@@ -30,11 +30,6 @@ div#title {
     color: #000;
 }
 
-#under_construction {
-    position: absolute;
-    top: 10px;
-}
-
 img#icon {
     width: 200px;
     height: 200px;
@@ -56,6 +51,13 @@ div#title_content {
 #title h1 {
     font-size: 70px;
     font-weight: 700;
+}
+
+h1#under_construction {
+    position: absolute;
+    top: 10px;
+    font-size: 40px;
+    text-align: center;
 }
 
 #title h2 {
@@ -86,6 +88,7 @@ div#skills {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.2);
 }
 
 div#about_nav {
@@ -104,9 +107,11 @@ div#skills_nav {
 div.about_nav_button,
 div.skills_nav_button {
     color: #000000;
-    padding: 10px 50px;
+    padding: 10px 15px;
     border-radius: 45px;
     font-weight: 500;
+    width: 10dvw;
+    text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
 }
