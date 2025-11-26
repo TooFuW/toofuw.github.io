@@ -118,7 +118,7 @@ body {
     font-size: clamp(1.5dvh, 1.5dvw, 2dvh);
 }
 
-#moile-note {
+#mobile-note {
     display: none;
 }
 
