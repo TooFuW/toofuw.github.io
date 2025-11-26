@@ -1,4 +1,4 @@
-/* Styles de base */
+/* Base styles */
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +21,7 @@ body {
     margin: 0;
 }
 
-/* Effet sticky général */
+/* Global sticky effect */
 .bloc {
     position: sticky;
     top: 0px;
@@ -30,12 +30,57 @@ body {
     width: 100dvw;
 }
 
-/* Section titre et introduction */
+/* Scroll indicator effect */
+
+.scroll-indicator {
+    transition: top 0.3s ease, right 0.3s ease, bottom 0.3s ease, flex-direction 0.3s ease;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 3dvh;
+    width: 100%;
+    height: 5px;
+    z-index: 999;
+}
+
+.scroll-indicator-line {
+    width: 5px;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    cursor: pointer;
+    pointer-events: all;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.scroll-indicator-line.selected {
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+.scroll-indicator-line.passed {
+    background-color: #000000;
+}
+
+/* Title and introduction */
+
 #title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1dvh;
+    height: 100dvh;
+    width: 100dvw;
+}
+
+#title > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 3dvw;
     background-color: #ffffff;
     color: #000;
 }
@@ -63,16 +108,14 @@ body {
     font-weight: 700;
 }
 
-h1#under_construction {
-    position: absolute;
-    top: 10px;
-    font-size: clamp(2.5dvh, 2.5dvw, 3.5dvh);
-    text-align: center;
-}
-
 #title h2 {
     font-size: clamp(2.5dvh, 2.5dvw, 3.5dvh);
     font-weight: 400;
+}
+
+#title h3 {
+    margin-top: 1dvh;
+    font-size: clamp(1.5dvh, 1.5dvw, 2dvh);
 }
 
 #title a {
@@ -90,9 +133,18 @@ h1#under_construction {
     text-decoration: none;
 }
 
-/* Section à propos et compétences */
+#title svg {
+    transition: all 0.3s ease;
+}
+
+#title svg:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* About and skills */
 #about {
-    background-color: #ffcc00;
+    background-color: #ffeaa7;
 }
 
 #about,
@@ -103,17 +155,19 @@ h1#under_construction {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #000000;
 }
 
+/* Tabulated nav for about and skills */
 #about_nav {
-    background-color: #ffff8f;
+    background-color: #fdf55a;
 }
 
 #about_nav,
 #skills_nav {
+    position: relative;
     display: flex;
-    gap: 5dvw;
     padding: 5px;
     border-radius: 50px;
     margin: 10dvh 0 2dvh 0;
@@ -123,7 +177,6 @@ h1#under_construction {
 .skills_nav_button {
     color: #000000;
     padding: 10px 15px;
-    border-radius: 45px;
     font-size: clamp(2dvh, 2.5dvmin, 3dvh);
     font-weight: 500;
     width: 20dvw;
@@ -133,12 +186,45 @@ h1#under_construction {
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
+    z-index: 1;
 }
 
 .about_nav_button.selected,
 .skills_nav_button.selected {
+    color: #fff;
+}
+
+#goal,
+#tech-stack {
+    border-radius: 20px 0 0 20px;
+    padding-right: calc(2.5dvw + 15px);
+}
+
+#hobbies,
+#tools {
+    padding-left: calc(2.5dvw + 15px);
+    padding-right: calc(2.5dvw + 15px);
+}
+
+#languages,
+#os {
+    border-radius: 0 20px 20px 0;
+    padding-left: calc(2.5dvw + 15px);
+}
+
+#about_nav_selection,
+#skills_nav_selection {
+    z-index: 0;
+    width: 20dvw;
+    padding: 10px 15px;
+    border-radius: 45px;
     background-color: #000000;
     color: #ffffff;
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    transition: all 0.3s ease;
 }
 
 #about_content_div,
@@ -146,6 +232,7 @@ h1#under_construction {
     width: 100%;
     display: flex;
     justify-content: center;
+    min-height: 70dvh; 
 }
 
 #about_content_div,
@@ -155,9 +242,9 @@ h1#under_construction {
     transition: all 0.3s ease;
 }
 
+/* Common layout for content panels */
 .about_content,
 .skills_content {
-    position: relative;
     width: 80%;
     max-width: 80%;
     margin: 0;
@@ -167,12 +254,14 @@ h1#under_construction {
 .about_content.selected {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    align-content: space-around; 
+    justify-content: space-evenly; 
+    gap: 20px;
 }
 
-
+/* Individual cards */
 .content_card {
-    background: linear-gradient(135deg, #ffffff, #fff6cc);
+    background: linear-gradient(135deg, #ffffff, #fffae8);
     border-radius: 24px;
     padding: 16px 18px;
     border: 3px solid;
@@ -180,14 +269,18 @@ h1#under_construction {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    flex: 1 1 260px;
-    max-width: 25dvw;
+    flex: 1 1 300px; 
     box-sizing: border-box;
     transform: translateY(0);
     transition: all 0.2s ease;
+    transform: rotate(1deg); 
+    margin: 0; 
 }
 
-/* titres dans les cartes */
+.content_card:nth-child(even) {
+    transform: rotate(-1deg);
+}
+
 .content_card_title {
     font-weight: 700;
     font-size: clamp(2dvh, 2.5dvmin, 3dvh);
@@ -196,7 +289,6 @@ h1#under_construction {
     margin-bottom: 4px;
 }
 
-/* petite barre colorée sous le titre */
 .content_card_title::after {
     content: "";
     display: block;
@@ -207,70 +299,58 @@ h1#under_construction {
     background: #000000;
 }
 
-/* texte de la carte */
 .content_card_text {
     font-size: clamp(2dvh, 2dvw, 2dvh);
 }
 
-/* couleurs différentes selon la position de la carte */
+/* Color variants applied depending on the card position */
 .about_content .content_card:nth-child(1) {
-    position: absolute;
-    top: 5dvh;
-    left: 0px;
-    transform: rotate(-12deg);
-    border-color: #ff6b6b;
-    background: linear-gradient(135deg, #ffffff, #ffe3e3);
+    border-color: #ff8c8c;
+    background: linear-gradient(135deg, #ffffff, #ffecec);
+    transform: rotate(-2deg);
 }
 .content_card:nth-child(1):hover {
-    transform: translateY(-4px) scale(1.02) rotate(-10deg);
+    transform: translateY(-4px) scale(1.02) rotate(0deg);
     box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
 }
 
 .about_content .content_card:nth-child(2) {
-    position: absolute;
-    top: 15dvh;
-    right: 0;
-    transform: rotate(12deg);
-    border-color: #4dabf7;
-    background: linear-gradient(135deg, #ffffff, #e7f3ff);
+    border-color: #74c0fc;
+    background: linear-gradient(135deg, #ffffff, #f0f7ff);
+    transform: rotate(2deg);
 }
 .content_card:nth-child(2):hover {
-    transform: translateY(-4px) scale(1.02) rotate(10deg);
+    transform: translateY(-4px) scale(1.02) rotate(0deg);
     box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
 }
 
 .about_content .content_card:nth-child(3) {
-    position: absolute;
-    top: 40dvh;
-    left: 5dvw;
-    transform: rotate(-7deg);
-    border-color: #51cf66;
-    background: linear-gradient(135deg, #ffffff, #e6ffec);
+    border-color: #8ce99a;
+    background: linear-gradient(135deg, #ffffff, #f0fff0);
+    transform: rotate(-1deg);
 }
 .content_card:nth-child(3):hover {
-    transform: translateY(-4px) scale(1.02) rotate(-5deg);
+    transform: translateY(-4px) scale(1.02) rotate(0deg);
     box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
 }
 
 .about_content .content_card:nth-child(4) {
-    position: absolute;
-    top: 45dvh;
-    right: 5dvw;
-    transform: rotate(7deg);
-    border-color: #ff9524;
-    background: linear-gradient(135deg, #ffffff, #ffe5c8);
+    border-color: #ffad69;
+    background: linear-gradient(135deg, #ffffff, #fff2e3);
+    transform: rotate(1deg);
 }
 .content_card:nth-child(4):hover {
-    transform: translateY(-4px) scale(1.02) rotate(5deg);
+    transform: translateY(-4px) scale(1.02) rotate(0deg);
     box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
 }
 
+/* Skills */
 #skills {
-    background-color: #00ff00;
+    background-color: #c5f5d3;
 }
 
 #skills_nav {
-    background-color: #8fff8f;
+    background-color: #9ff28d;
 }
 
 .skills_content.selected {
@@ -282,15 +362,16 @@ h1#under_construction {
 .skills_content.selected h3 {
     font-size: clamp(3.5dvh, 3.5dvw, 5dvh);
     text-align: center;
-    margin-bottom: 2dvh;
+    margin-bottom: 5dvh;
 }
 
+/* Tools icon grid */
 ul.tools {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 100px;
+    gap: 8dvh;
     margin: 0;
     padding: 0;
 }
@@ -298,6 +379,38 @@ ul.tools {
 ul.tools li {
     display: flex;
     align-items: center;
+    position: relative;
+}
+
+/* Custom info-bulles for tools and technologies */
+ul.tools li::after,
+.tech_used li::after {
+    content: attr(data-tooltip);
+
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 10;
+    pointer-events: none;
+}
+
+ul.tools li:hover::after,
+.tech_used li:hover::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 ul.tools li:hover {
@@ -313,58 +426,19 @@ img.tools {
     max-height: 12dvh;
 }
 
-/* Projets */
+/* Projects */
 
-#pepite {
-    background-color: #227eff;
-    color: #fff;
-}
-#lafabrik {
-    background-color: #ff1717;
-    color: #fff;
-}
-#pacificsecurite {
-    background-color: #ffcc00;
-}
-#videosafe {
-    background-color: #00ff00;
-}
-#akos {
-    background-color: #227eff;
-    color: #fff;
-}
-#supervised-project {
-    background-color: #ff1717;
-    color: #fff;
-}
-#cassini-hackaton {
-    background-color: #ffcc00;
-}
-#hackagou {
-    background-color: #00ff00;
-}
-#edt-unc {
-    background-color: #227eff;
-    color: #fff;
-}
-#shortmoji {
-    background-color: #ff1717;
-    color: #fff;
-}
-#chesscomhelper {
-    background-color: #ffcc00;
-}
-#robot-rover {
-    background-color: #00ff00;
-}
-
-.project {
+.project_container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    color: #000;
 }
 
+/* Left and right structure for project text and resources */
 .project_content,
 .project_ressources {
     display: flex;
@@ -403,16 +477,21 @@ img.tools {
 }
 
 .project_content ul {
-    padding-left: 50px;
+    padding-left: 15px;
 }
 
 .project_content li {
-    font-size: clamp(2dvh, 2.5dvw, 3dvh);
+    font-size: clamp(2dvh, 2.25dvw, 2.5dvh);
+}
+
+.project_content li a {
+    color: #000;
+    font-weight: 700;
 }
 
 .project_content b {
-    background: #fff;
-    color: #000;
+    background: #000;
+    color: #fff;
     padding: 0 4px;
     border-radius: 4px;
 }
@@ -430,6 +509,7 @@ img.tools {
 .project_links {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     font-size: clamp(2dvh, 2.5dvw, 3dvh);
     gap: 5px;
     width: max-content;
@@ -437,10 +517,11 @@ img.tools {
 
 .project_links a {
     position: relative;
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     width: fit-content;
     transition: all 0.3s ease;
+    font-weight: 700;
 }
 
 .project_links a::after {
@@ -450,7 +531,7 @@ img.tools {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #ffffff;
+    background-color: #000000;
     z-index: -1;
     transition: all 0.3s ease;
 }
@@ -462,67 +543,78 @@ img.tools {
     left: 0;
     width: 0;
     height: clamp(3dvh, 3.5dvw, 4dvh);
-    background-color: #ffffff;
+    background-color: #000000;
     z-index: -1;
     transition: all 0.3s ease;
 }
 
 .project_links a:hover::before {
-    width: 100%;
+    width: calc(100% + 3px);
 }
 
 .project_links a:hover {
-    color: #000;
+    color: #ffffff;
 }
 
-/* Exceptions */
-
-#pacificsecurite b,
-#videosafe b,
-#cassini-hackaton b,
-#hackagou b,
-#chesscomhelper b,
-#robot-rover b {
-    background: #000;
-    color: #fff;
+/* Project specific color codes */
+#pepite,
+#akos,
+#edt-unc,
+#robot-rover {
+    background-color: #a5c8ff;
 }
-#pacificsecurite a,
-#videosafe a,
-#cassini-hackaton a,
-#hackagou a,
-#chesscomhelper a {
-    color: #000;
+#lafabrik,
+#supervised-project,
+#shortmoji {
+    background-color: #f4b4b4;
 }
-#pacificsecurite a::after,
-#videosafe a::after,
-#cassini-hackaton a::after,
-#hackagou a::after,
-#chesscomhelper a::after {
-    background-color: #000;
+#pacificsecurite,
+#cassini-hackaton,
+#chesscomhelper {
+    background-color: #ffeaa7;
 }
-#pacificsecurite a::before,
-#videosafe a::before,
-#cassini-hackaton a::before,
-#hackagou a::before,
-#chesscomhelper a::before {
-    background-color: #000;
-}
-#pacificsecurite a:hover,
-#videosafe a:hover,
-#cassini-hackaton a:hover,
-#hackagou a:hover,
-#chesscomhelper a:hover {
-    color: #fff;
+#videosafe,
+#hackagou,
+#portfolio {
+    background-color: #c5f5d3;
 }
 
+/* Reveal effect */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease !important;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile/tablet adaptations */
 @media (max-width: 1000px), (max-height: 600px) {
-    #title {
+    .scroll-indicator {
+        flex-direction: column;
+        justify-content: space-around;
+        top: 0;
+        right: 10px;
+        bottom: 0;
+        width: 5px;
+        height: 100%;
+    }
+
+    .scroll-indicator-line {
+        width: 100%;
+        height: 5px;
+    }
+
+    #title > div {
         flex-direction: column;
     }
 
     #title_content {
         text-align: center;
-        padding: 0 10px;
+        padding: 0 20px;
     }
 
     #icon {
@@ -543,12 +635,21 @@ img.tools {
 
     #about_nav,
     #skills_nav {
-        gap: 3dvw;
-        margin: 3dvh 0 3dvh 0;
+        margin: 2dvh 0 2dvh 0;
     }
 
-    .about_content {
-        gap: 20px;
+    .about_content.selected {
+        min-height: 0;
+        align-content: flex-start;
+        justify-content: center;
+        gap: 10px;
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .skills_content.selected {
+        width: 90%;
+        max-width: 90%;
     }
 
     .content_card {
@@ -562,6 +663,10 @@ img.tools {
         max-width: 100%;
     }
 
+    .skills_content.selected h3 {
+        margin-bottom: 2dvh;
+    }
+
     ul.tools {
         gap: 24px;
     }
@@ -570,7 +675,7 @@ img.tools {
         max-height: 64px;
     }
 
-    .project {
+    .project_container {
         flex-direction: column;
         gap: 3dvh;
     }
@@ -591,11 +696,12 @@ img.tools {
         height: 4dvh;
     }
 
-    .project_content ul {
-        padding-left: 4dvw;
-    }
-
     .project_content li {
         font-size: clamp(2dvh, 2dvw, 3dvh);
+    }
+
+    .project_links {
+        width: auto;
+        align-items: flex-start;
     }
 }
