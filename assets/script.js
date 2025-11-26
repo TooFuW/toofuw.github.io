@@ -106,11 +106,17 @@ window.addEventListener("DOMContentLoaded", () => {
     };
 
     window.addEventListener('wheel', (event) => {
+        if (document.body.classList.contains('lightbox-open')) {
+            return;
+        }
         event.preventDefault();
         jump(Math.sign(event.deltaY));
     }, { passive: false });
 
     window.addEventListener('keydown', (event) => {
+        if (document.body.classList.contains('lightbox-open')) {
+            return;
+        }
         if (['ArrowDown', 'PageDown', ' '].includes(event.key)) {
             event.preventDefault();
             jump(1);
@@ -146,4 +152,78 @@ window.addEventListener("DOMContentLoaded", () => {
         scrollIndex = 0;
         jump(1);
     });
+
+    // Project media lightbox
+    const projectMediaElements = document.querySelectorAll('.project_image img, .project_image video');
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImage = lightbox ? lightbox.querySelector('img') : null;
+    const lightboxVideo = lightbox ? lightbox.querySelector('video') : null;
+
+    if (lightbox && lightboxImage && lightboxVideo && projectMediaElements.length) {
+        const resetLightboxMedia = () => {
+            lightboxImage.classList.remove('active');
+            lightboxImage.removeAttribute('src');
+            lightboxImage.removeAttribute('alt');
+
+            lightboxVideo.pause();
+            lightboxVideo.classList.remove('active');
+            lightboxVideo.removeAttribute('src');
+            lightboxVideo.load();
+        };
+
+        const openLightbox = (type, source, altText = '') => {
+            if (!source) return;
+            resetLightboxMedia();
+
+            if (type === 'image') {
+                lightboxImage.src = source;
+                lightboxImage.alt = altText;
+                lightboxImage.classList.add('active');
+            } else {
+                lightboxVideo.src = source;
+                lightboxVideo.classList.add('active');
+                lightboxVideo.currentTime = 0;
+            }
+
+            lightbox.classList.add('visible');
+            document.body.classList.add('lightbox-open');
+        };
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('visible');
+            document.body.classList.remove('lightbox-open');
+            resetLightboxMedia();
+        };
+
+        const getVideoSource = (videoElement) => {
+            if (!videoElement) return '';
+            if (videoElement.currentSrc) return videoElement.currentSrc;
+            if (videoElement.getAttribute('src')) return videoElement.getAttribute('src');
+            const sourceChild = videoElement.querySelector('source');
+            return sourceChild ? sourceChild.src : '';
+        };
+
+        projectMediaElements.forEach((media) => {
+            media.addEventListener('click', () => {
+                if (media.tagName.toLowerCase() === 'video') {
+                    const source = getVideoSource(media);
+                    openLightbox('video', source);
+                } else {
+                    openLightbox('image', media.src, media.alt || '');
+                }
+            });
+        });
+
+        lightbox.addEventListener('click', (event) => {
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && lightbox.classList.contains('visible')) {
+                closeLightbox();
+            }
+        });
+    }
 });
