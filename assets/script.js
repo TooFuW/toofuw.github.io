@@ -143,6 +143,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // First page button
     const firstPageButton = document.querySelector('#title svg');
     firstPageButton.addEventListener('click', () => {
+        scrollIndex = 0;
         jump(1);
     });
 });
