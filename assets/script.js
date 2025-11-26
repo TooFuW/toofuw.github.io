@@ -68,7 +68,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     // Modified smooth scrolling from page to page
-    const step = () => window.innerHeight + 2
+    const step = () => window.innerHeight + 1
     let scrollIndex = Math.floor(window.scrollY / step());
 
     // Scroll indicator
