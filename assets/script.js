@@ -75,8 +75,11 @@ window.addEventListener("DOMContentLoaded", () => {
     const blocs = document.querySelectorAll('.bloc');
     const scrollIndicator = document.createElement('div');
     scrollIndicator.classList.add('scroll-indicator');
+    console.log(blocs);
+blocs.forEach(b => console.log(b.id, b.dataset.tooltip));
+
     scrollIndicator.innerHTML = `
-        ${Array.from({ length: blocs.length }).map((_, i) => `<div data-index="${i}" class="scroll-indicator-line ${i === scrollIndex ? 'selected' : i < scrollIndex ? 'passed' : ''}"></div>`).join('')}
+        ${Array.from({ length: blocs.length }).map((_, i) => `<div data-index="${i}" data-tooltip="${blocs[i].dataset.tooltip}" class="scroll-indicator-line ${i === scrollIndex ? 'selected' : i < scrollIndex ? 'passed' : ''}"></div>`).join('')}
     `;
     document.body.insertBefore(scrollIndicator, document.querySelector("#title"));
     const scrollIndicatorLines = scrollIndicator.querySelectorAll('.scroll-indicator-line');
@@ -105,6 +108,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }, 650);
     };
 
+    // Scroll par slide sur desktop (wheel)
     window.addEventListener('wheel', (event) => {
         if (document.body.classList.contains('lightbox-open')) {
             return;
@@ -113,6 +117,7 @@ window.addEventListener("DOMContentLoaded", () => {
         jump(Math.sign(event.deltaY));
     }, { passive: false });
 
+    // Clavier
     window.addEventListener('keydown', (event) => {
         if (document.body.classList.contains('lightbox-open')) {
             return;
@@ -125,6 +130,45 @@ window.addEventListener("DOMContentLoaded", () => {
             jump(-1);
         }
     });
+
+    // Touch events pour mobile
+    let touchStartY = 0;
+    let touchEndY = 0;
+
+    window.addEventListener('touchstart', (event) => {
+        if (document.body.classList.contains('lightbox-open')) {
+            return;
+        }
+        touchStartY = event.changedTouches[0].screenY;
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (event) => {
+        if (document.body.classList.contains('lightbox-open')) {
+            return;
+        }
+        event.preventDefault();
+    }, { passive: false });
+
+    window.addEventListener('touchend', (event) => {
+        if (document.body.classList.contains('lightbox-open')) {
+            return;
+        }
+        touchEndY = event.changedTouches[0].screenY;
+        handleSwipe();
+    }, { passive: true });
+
+    const handleSwipe = () => {
+        const swipeThreshold = 50;
+        const diff = touchStartY - touchEndY;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                jump(1);
+            } else {
+                jump(-1);
+            }
+        }
+    };
 
     window.addEventListener('scroll', () => {
         if (!isAnimating) targetY = window.scrollY;

@@ -9,7 +9,7 @@
         <title>Portfolio Eyrian Muet</title>
     </head>
     <body>
-        <div class="bloc" id="title">
+        <div class="bloc" id="title" data-tooltip="Welcome">
             <div>
                 <img src="https://avatars.githubusercontent.com/u/137835885?s=400&u=5388d0591c47ef47ecb1d6d08a5d15059c2586b6&v=4" alt="Icon" id="icon">
                 <div id="title_content">
@@ -23,7 +23,7 @@
                         I am passionate about tech and I like to code random stuff !
                     </h2>
                     <h3 id="mobile-note">
-                        The portfolio renders better on desktop ;) The mobile adaptation isn't finished yet so it may be a bit buggy.
+                        The portfolio renders better on desktop and it's easier to navigate there ;) The mobile adaptation isn't finished yet so it's a bit buggy.
                     </h3>
                     <h3>
                         (PS : If you have an idea to make my navbar not kill epileptics, feel free to contact me !)
@@ -36,7 +36,7 @@
                 <path d="M8 12L12 16M12 16L16 12M12 16V8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </div>
-        <div class="bloc" id="about">
+        <div class="bloc" id="about" data-tooltip="About&#10;me">
             <div id="about_nav">
                 <div id="about_nav_selection"></div>
                 <div class="about_nav_button selected" id="goal" data-target="about_goal">
@@ -130,7 +130,7 @@
                 </div>
             </div>
         </div>
-        <div class="bloc" id="skills">
+        <div class="bloc" id="skills" data-tooltip="Skills">
             <div id="skills_nav">
                 <div id="skills_nav_selection"></div>
                 <div class="skills_nav_button selected" id="tech-stack" data-target="skills_languages">
@@ -198,7 +198,7 @@
                 </div>
             </div>
         </div>
-        <div class="bloc project" id="pepite">
+        <div class="bloc project" id="pepite" data-tooltip="Pépite">
             <div class="project_container">
                 <div class="project_content">
                     <h2>Pépite - BONUS Project</h2>
@@ -240,7 +240,7 @@
                 </div>
             </div>
         </div>
-        <div class="bloc project" id="lafabrik">
+        <div class="bloc project" id="lafabrik" data-tooltip="La Fabrik">
             <div class="project_container">
                 <div class="project_content">
                     <h2>Internship - La Fabrik</h2>
@@ -273,7 +273,7 @@
                 </div>
             </div>
         </div>
-        <div class="bloc project" id="pacificsecurite">
+        <div class="bloc project" id="pacificsecurite" data-tooltip="Batitech">
             <div class="project_container">
                 <div class="project_content">
                     <h2>Summer job - Batitech</h2>
@@ -305,7 +305,7 @@
                 </div>
             </div>
         </div>
-        <div class="bloc project" id="videosafe">
+        <div class="bloc project" id="videosafe" data-tooltip="VideoSafe">
             <div class="project_container">
                 <div class="project_content">
                     <h2>Batitech</h2>
@@ -331,7 +331,7 @@
                 </div>
             </div>
         </div>
-        <div class="bloc project" id="akos">
+        <div class="bloc project" id="akos" data-tooltip="AKOS">
             <div class="project_container">
                 <div class="project_content">
                     <h2>AKOS</h2>
@@ -354,7 +354,7 @@
                 </div>
             </div>
         </div>
-        <div class="bloc project" id="supervised-project">
+        <div class="bloc project" id="supervised-project" data-tooltip="CNN Pytorch">
             <div class="project_container">
                 <div class="project_content">
                     <h2>Supervised Project</h2>
@@ -377,7 +377,7 @@
                 </div>
             </div>
         </div>
-        <div class="bloc project" id="cassini-hackaton">
+        <div class="bloc project" id="cassini-hackaton" data-tooltip="Cassini hackathon">
             <div class="project_container">
                 <div class="project_content">
                     <h2>CASSINI HACKATON 10th Edition</h2>
@@ -409,7 +409,7 @@
                 </div>
             </div>
         </div>
-        <div class="bloc project" id="hackagou">
+        <div class="bloc project" id="hackagou" data-tooltip="Hackagou">
             <div class="project_container">
                 <div class="project_content">
                     <h2>Hackagou</h2>
@@ -440,7 +440,7 @@
                 </div>
             </div>
         </div>
-        <div class="bloc project" id="edt-unc">
+        <div class="bloc project" id="edt-unc" data-tooltip="EDT UNC">
             <div class="project_container">
                 <div class="project_content">
                     <h2>EDT UNC</h2>
@@ -468,7 +468,7 @@
                 </div>
             </div>
         </div>
-        <div class="bloc project" id="shortmoji">
+        <div class="bloc project" id="shortmoji" data-tooltip="ShortMoji">
             <div class="project_container">
                 <div class="project_content">
                     <h2>ShortMoji</h2>
@@ -494,7 +494,7 @@
                 </div>
             </div>
         </div>
-        <div class="bloc project" id="chesscomhelper">
+        <div class="bloc project" id="chesscomhelper" data-tooltip="ChessComHelper">
             <div class="project_container">
                 <div class="project_content">
                     <h2>ChessComHelper</h2>
@@ -520,7 +520,7 @@
                 </div>
             </div>
         </div>
-        <div class="bloc project" id="portfolio">
+        <div class="bloc project" id="portfolio" data-tooltip="Portfolio">
             <div class="project_container">
                 <div class="project_content">
                     <h2>Portfolio</h2>
@@ -538,9 +538,11 @@
                         </li>
                     </ul>
                 </div>
+                <div class="project_ressources">
+                </div>
             </div>
         </div>
-        <div class="bloc project" id="robot-rover">
+        <div class="bloc project" id="robot-rover" data-tooltip="Robot ROVER">
             <div class="project_container">
                 <div class="project_content">
                     <h2>Robot ROVER</h2>
