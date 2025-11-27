@@ -75,9 +75,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const blocs = document.querySelectorAll('.bloc');
     const scrollIndicator = document.createElement('div');
     scrollIndicator.classList.add('scroll-indicator');
-    console.log(blocs);
-blocs.forEach(b => console.log(b.id, b.dataset.tooltip));
-
     scrollIndicator.innerHTML = `
         ${Array.from({ length: blocs.length }).map((_, i) => `<div data-index="${i}" data-tooltip="${blocs[i].dataset.tooltip}" class="scroll-indicator-line ${i === scrollIndex ? 'selected' : i < scrollIndex ? 'passed' : ''}"></div>`).join('')}
     `;
@@ -108,7 +105,7 @@ blocs.forEach(b => console.log(b.id, b.dataset.tooltip));
         }, 650);
     };
 
-    // Scroll par slide sur desktop (wheel)
+    // Scroll per slide on desktop (wheel)
     window.addEventListener('wheel', (event) => {
         if (document.body.classList.contains('lightbox-open')) {
             return;
@@ -131,7 +128,7 @@ blocs.forEach(b => console.log(b.id, b.dataset.tooltip));
         }
     });
 
-    // Touch events pour mobile
+    // Touch events for mobile
     let touchStartY = 0;
     let touchEndY = 0;
 
@@ -174,20 +171,27 @@ blocs.forEach(b => console.log(b.id, b.dataset.tooltip));
         if (!isAnimating) targetY = window.scrollY;
     }, { passive: true });
 
-    scrollIndicatorLines.forEach((line, index) => {
-        line.addEventListener('click', () => {
-            if (isAnimating) return;
-            isAnimating = true;
-            window.scrollTo({ top: step() * index, behavior: 'smooth' });
-            setTimeout(() => {
-                isAnimating = false;
-            }, 650);
-            scrollIndex = index;
-            scrollIndicatorLines.forEach((otherLine, otherIndex) => {
-                otherLine.classList.toggle('selected', otherIndex === index);
-                otherLine.classList.toggle('passed', otherIndex < index);
-            })
+    const scrollToIndex = (index) => {
+        if (isAnimating || index === scrollIndex) return;
+
+        isAnimating = true;
+        scrollIndex = Math.max(0, Math.min(blocs.length - 1, index));
+        targetY = clampScroll(step() * scrollIndex);
+
+        scrollIndicatorLines.forEach((otherLine, otherIndex) => {
+            otherLine.classList.toggle('selected', otherIndex === scrollIndex);
+            otherLine.classList.toggle('passed', otherIndex < scrollIndex);
         });
+
+        window.scrollTo({ top: targetY, behavior: 'smooth' });
+
+        setTimeout(() => {
+            isAnimating = false;
+        }, 650);
+    };
+
+    scrollIndicatorLines.forEach((line, index) => {
+        line.addEventListener('click', () => scrollToIndex(index));
     });
 
     // First page button
