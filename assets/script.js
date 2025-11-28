@@ -269,6 +269,25 @@ window.addEventListener("DOMContentLoaded", () => {
         }, duration + 150);
     });
 
+    // Scroll to the top at the refresh to prevent glitchs and bugs
+    isAnimating = true;
+    scrollIndicatorLines.forEach((line, i) => {
+        if (i === 0) {
+            line.classList.add('selected');
+            line.classList.remove('passed');
+        } else {
+            line.classList.remove('selected');
+            line.classList.remove('passed');
+        }
+    });
+    const duration = 500 + (Math.abs(0 - scrollIndex) - 1) * (1100 / 14);
+    targetY = 0;
+    scrollIndex = 0;
+    smoothScrollTo(0, duration);
+    setTimeout(() => {
+        isAnimating = false;
+    }, duration + 150);
+
     // Project media lightbox
     const projectMediaElements = document.querySelectorAll('.project_image img, .project_image video');
     const lightbox = document.getElementById('image-lightbox');
