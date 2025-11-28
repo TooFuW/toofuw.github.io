@@ -774,7 +774,7 @@ body.lightbox-open {
         justify-content: center;
         position: fixed;
         bottom: 10px;
-        right: 5px;
+        right: 10px;
         width: 25px;
         height: 25px;
         border-radius: 50%;
@@ -799,11 +799,10 @@ body.lightbox-open {
         justify-content: center;
         flex-direction: column;
         bottom: 10px;
-        left: 5px;
-        width: 25px;
-        height: 25px;
+        left: 10px;
+        width: 28px;
+        height: 28px;
         border-radius: 50%;
-        border: 3px solid #000000;
         background-color: #000000;
         color: #ffffff;
         cursor: pointer;
@@ -820,13 +819,13 @@ body.lightbox-open {
     }
 
     .scroll-indicator.selected {
-        bottom: 4px;
+        bottom: 0px;
         left: 0px;
         width: 100dvw;
         height: 100dvh;
         border-radius: 0;
         border: 0;
-        background-color: #ffffff31;
+        background-color: #ffffff41;
         backdrop-filter: blur(7px);
         color: #000000;
     }
@@ -849,6 +848,7 @@ body.lightbox-open {
     .scroll-indicator-line::after {
         content: attr(data-tooltip);
         text-decoration: underline;
+        font-weight: 700;
         white-space: normal;
         word-break: normal;
         overflow-wrap: normal;
@@ -908,22 +908,17 @@ body.lightbox-open {
 
     .scroll-indicator-line::before {
         position: absolute;
-        width: 6px;
-        height: 6px;
-        max-width: 0;
-        max-height: 0;
-        border-radius: 50%;
-        content: "";
+        content: "•";
+        font-size: 0;
         top: 56%;
         left: 38%;
         transform: translate(-50%, -50%);
-        background-color: #000000;
         z-index: 9999;
+        transition: font-size 0.5s ease;
     }
 
     .scroll-indicator-line.selected::before {
-        max-width: 6px;
-        max-height: 6px;
+        font-size: 14px;
     }
 
     #title > div {

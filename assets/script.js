@@ -85,7 +85,7 @@ window.addEventListener("DOMContentLoaded", () => {
     document.body.insertBefore(scrollIndicator, document.querySelector("#title"));
     const scrollIndicatorLines = scrollIndicator.querySelectorAll('.scroll-indicator-line');
     scrollIndicator.addEventListener('click', (e) => {
-        scrollIndicator.classList.add('selected');
+        scrollIndicator.classList.toggle('selected');
     })
 
     let targetY = window.scrollY;
@@ -236,10 +236,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     scrollIndicatorLines.forEach((line, index) => {
         line.addEventListener('click', () => {
-            setTimeout(() =>
-                scrollIndicator.classList.remove('selected')
-            , 100);
-            scrollToIndex(index)
+            scrollToIndex(index);
         });
     });
 
