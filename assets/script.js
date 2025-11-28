@@ -275,7 +275,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     // Scroll to the top at the refresh to prevent glitchs and bugs
-    //scrollToTop();
+    scrollToTop();
 
     // If the size of the page change, scroll to the top
     window.addEventListener('resize', () => {
