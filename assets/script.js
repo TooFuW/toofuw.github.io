@@ -247,8 +247,8 @@ window.addEventListener("DOMContentLoaded", () => {
         jump(1);
     });
 
-    // Scroll to top button
-    scrollToTopButton.addEventListener('click', () => {
+    // Scroll to top function
+    const scrollToTop = () => {
         if (isAnimating) return;
         isAnimating = true;
         scrollIndicatorLines.forEach((line, i) => {
@@ -267,26 +267,20 @@ window.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             isAnimating = false;
         }, duration + 150);
+    }
+
+    // Scroll to top button
+    scrollToTopButton.addEventListener('click', () => {
+        scrollToTop();
     });
 
     // Scroll to the top at the refresh to prevent glitchs and bugs
-    isAnimating = true;
-    scrollIndicatorLines.forEach((line, i) => {
-        if (i === 0) {
-            line.classList.add('selected');
-            line.classList.remove('passed');
-        } else {
-            line.classList.remove('selected');
-            line.classList.remove('passed');
-        }
+    //scrollToTop();
+
+    // If the size of the page change, scroll to the top
+    window.addEventListener('resize', () => {
+        scrollToTop();
     });
-    const duration = 500 + (Math.abs(0 - scrollIndex) - 1) * (1100 / 14);
-    targetY = 0;
-    scrollIndex = 0;
-    smoothScrollTo(0, duration);
-    setTimeout(() => {
-        isAnimating = false;
-    }, duration + 150);
 
     // Project media lightbox
     const projectMediaElements = document.querySelectorAll('.project_image img, .project_image video');
