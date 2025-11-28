@@ -75,11 +75,18 @@ window.addEventListener("DOMContentLoaded", () => {
     const blocs = document.querySelectorAll('.bloc');
     const scrollIndicator = document.createElement('div');
     scrollIndicator.classList.add('scroll-indicator');
-    scrollIndicator.innerHTML = `
+    scrollIndicator.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+        <path fill="#ffffff" fill-rule="evenodd" d="M0 3.75A.75.75 0 0 1 .75 3h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 3.75ZM0 8a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 8Zm.75 3.5a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5H.75Z" clip-rule="evenodd"/>
+    </svg>
+    `
+    scrollIndicator.innerHTML += `
         ${Array.from({ length: blocs.length }).map((_, i) => `<div data-index="${i}" data-tooltip="${blocs[i].dataset.tooltip}" class="scroll-indicator-line ${i === scrollIndex ? 'selected' : i < scrollIndex ? 'passed' : ''}"></div>`).join('')}
     `;
     document.body.insertBefore(scrollIndicator, document.querySelector("#title"));
     const scrollIndicatorLines = scrollIndicator.querySelectorAll('.scroll-indicator-line');
+    scrollIndicator.addEventListener('click', (e) => {
+        scrollIndicator.classList.add('selected');
+    })
 
     let targetY = window.scrollY;
     let isAnimating = false;
@@ -87,6 +94,37 @@ window.addEventListener("DOMContentLoaded", () => {
     const clampScroll = (y) => {
         const max = document.body.scrollHeight - step();
         return Math.max(0, Math.min(max, y));
+    };
+
+    const scrollToTopButton = document.querySelector('#scroll-top');
+
+    const smoothScrollTo = (targetY, duration = 1000) => {
+        if (targetY === 0) {
+            scrollToTopButton.classList.remove('selected');
+        } else {
+            scrollToTopButton.classList.add('selected');
+        }
+        const startY = window.scrollY;
+        const distance = targetY - startY;
+        const startTime = performance.now();
+
+        const animateScroll = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Easing (ease-in-out)
+            const easeProgress = progress < 0.5
+                ? 2 * progress * progress
+                : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+            
+            window.scrollTo(0, startY + distance * easeProgress);
+            
+            if (progress < 1) {
+                requestAnimationFrame(animateScroll);
+            }
+        };
+
+        requestAnimationFrame(animateScroll);
     };
 
     const jump = (direction) => {
@@ -99,7 +137,7 @@ window.addEventListener("DOMContentLoaded", () => {
             line.classList.toggle('selected', index === scrollIndex);
             line.classList.toggle('passed', index < scrollIndex);
         })
-        window.scrollTo({ top: targetY, behavior: 'smooth' });
+        smoothScrollTo(targetY, 500);
         setTimeout(() => {
             isAnimating = false;
         }, 650);
@@ -107,23 +145,24 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Scroll per slide on desktop (wheel)
     window.addEventListener('wheel', (event) => {
-        if (document.body.classList.contains('lightbox-open')) {
+        event.preventDefault();
+        if (document.body.classList.contains('lightbox-open') ||
+            ((window.innerWidth < 1000 || window.innerHeight < 600) && scrollIndicator.classList.contains('selected'))) {
             return;
         }
-        event.preventDefault();
         jump(Math.sign(event.deltaY));
     }, { passive: false });
 
     // Clavier
     window.addEventListener('keydown', (event) => {
-        if (document.body.classList.contains('lightbox-open')) {
+        event.preventDefault();
+        if (document.body.classList.contains('lightbox-open') ||
+            ((window.innerWidth < 1000 || window.innerHeight < 600) && scrollIndicator.classList.contains('selected'))) {
             return;
         }
         if (['ArrowDown', 'PageDown', ' '].includes(event.key)) {
-            event.preventDefault();
             jump(1);
         } else if (['ArrowUp', 'PageUp'].includes(event.key)) {
-            event.preventDefault();
             jump(-1);
         }
     });
@@ -147,7 +186,8 @@ window.addEventListener("DOMContentLoaded", () => {
     }, { passive: false });
 
     window.addEventListener('touchend', (event) => {
-        if (document.body.classList.contains('lightbox-open')) {
+        if (document.body.classList.contains('lightbox-open') ||
+            ((window.innerWidth < 1000 || window.innerHeight < 600) && scrollIndicator.classList.contains('selected'))) {
             return;
         }
         touchEndY = event.changedTouches[0].screenY;
@@ -168,30 +208,39 @@ window.addEventListener("DOMContentLoaded", () => {
     };
 
     window.addEventListener('scroll', () => {
-        if (!isAnimating) targetY = window.scrollY;
+        if (!isAnimating) {
+            targetY = window.scrollY;
+        }
     }, { passive: true });
 
     const scrollToIndex = (index) => {
         if (isAnimating || index === scrollIndex) return;
-
         isAnimating = true;
-        scrollIndex = Math.max(0, Math.min(blocs.length - 1, index));
-        targetY = clampScroll(step() * scrollIndex);
-
-        scrollIndicatorLines.forEach((otherLine, otherIndex) => {
-            otherLine.classList.toggle('selected', otherIndex === scrollIndex);
-            otherLine.classList.toggle('passed', otherIndex < scrollIndex);
+        
+        const direction = index > scrollIndex ? 1 : -1;
+        const steps = Math.abs(index - scrollIndex);
+        targetY = clampScroll(window.scrollY + step() * direction * steps);
+        scrollIndex = index;
+        
+        scrollIndicatorLines.forEach((line, i) => {
+            line.classList.toggle('selected', i === scrollIndex);
+            line.classList.toggle('passed', i < scrollIndex);
         });
-
-        window.scrollTo({ top: targetY, behavior: 'smooth' });
-
+        
+        const duration = 500 + (steps - 1) * (1100 / 14);
+        smoothScrollTo(targetY, duration);
         setTimeout(() => {
             isAnimating = false;
-        }, 650);
+        }, duration + 150);
     };
 
     scrollIndicatorLines.forEach((line, index) => {
-        line.addEventListener('click', () => scrollToIndex(index));
+        line.addEventListener('click', () => {
+            setTimeout(() =>
+                scrollIndicator.classList.remove('selected')
+            , 100);
+            scrollToIndex(index)
+        });
     });
 
     // First page button
@@ -199,6 +248,28 @@ window.addEventListener("DOMContentLoaded", () => {
     firstPageButton.addEventListener('click', () => {
         scrollIndex = 0;
         jump(1);
+    });
+
+    // Scroll to top button
+    scrollToTopButton.addEventListener('click', () => {
+        if (isAnimating) return;
+        isAnimating = true;
+        scrollIndicatorLines.forEach((line, i) => {
+            if (i === 0) {
+                line.classList.add('selected');
+                line.classList.remove('passed');
+            } else {
+                line.classList.remove('selected');
+                line.classList.remove('passed');
+            }
+        });
+        const duration = 500 + (Math.abs(0 - scrollIndex) - 1) * (1100 / 14);
+        targetY = 0;
+        scrollIndex = 0;
+        smoothScrollTo(0, duration);
+        setTimeout(() => {
+            isAnimating = false;
+        }, duration + 150);
     });
 
     // Project media lightbox
@@ -263,9 +334,7 @@ window.addEventListener("DOMContentLoaded", () => {
         });
 
         lightbox.addEventListener('click', (event) => {
-            if (event.target === lightbox) {
-                closeLightbox();
-            }
+            closeLightbox();
         });
 
         document.addEventListener('keydown', (event) => {

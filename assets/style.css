@@ -44,6 +44,10 @@ body {
     z-index: 999;
 }
 
+.scroll-indicator svg {
+    display: none;
+}
+
 .scroll-indicator-line {
     position: relative;
     width: 15px;
@@ -51,14 +55,15 @@ body {
     border-radius: 50%;
     border: 2px solid #000000;
     cursor: pointer;
-    pointer-events: all;
     background-color: #ffffff;
     transition: background-color 0.3s ease, border-radius 0.3s ease;
 }
 
 .scroll-indicator-line::after {
     content: attr(data-tooltip);
-    word-break: break-all;
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: break-word;
     position: absolute;
     bottom: -2px;
     left: 50%;
@@ -79,7 +84,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: max-width 0.5s ease, max-height 0.5s ease, border-radius 0.5s ease, font-size 0.5s ease, color 0.1s ease;
+    pointer-events: auto;
+    transition: max-width 0.5s ease, max-height 0.5s ease, border-radius 0.5s ease, font-size 0.5s ease, color 0.5s ease, background-color 0.5s ease;
 }
 
 .scroll-indicator-line.selected::after {
@@ -90,7 +96,6 @@ body {
     max-width: 7dvw;
     max-height: 30px;
     border-radius: 5px;
-    transition: max-width 0.5s ease, max-height 0.5s ease, border-radius 0.5s ease, font-size 0.5s ease, color 0.8s ease-in-out;
     color: #000000;
 }
 
@@ -110,6 +115,10 @@ body {
 
 .scroll-indicator-line.passed {
     background-color: #000000;
+}
+
+#scroll-top {
+    display: none;
 }
 
 /* Title and introduction */
@@ -517,15 +526,18 @@ img.tools {
 }
 
 .tech_used li {
+    position: relative;
     transition: all 0.2s ease;
 }
-
-.tech_used li:hover {
-    transform: translateY(-5px);
-}
-
 .tech_used img {
     height: 5dvh;
+    filter: drop-shadow(0.1dvh 0.1dvh 0 rgba(0, 0, 0, 0.7));
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.tech_used img:hover {
+    filter: drop-shadow(1.1dvh 1.1dvh 0 rgba(0, 0, 0, 0.7));
+    transform: translateY(-1dvh);
 }
 
 .project_content ul {
@@ -727,7 +739,7 @@ body.lightbox-open {
     background-color: #a5c8ff;
 }
 #lafabrik,
-#supervised-project,
+#final-uni-project,
 #shortmoji {
     background-color: #f4b4b4;
 }
@@ -756,27 +768,167 @@ body.lightbox-open {
 
 /* Mobile/tablet adaptations */
 @media (max-width: 1000px), (max-height: 600px) {
+    #scroll-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 10px;
+        right: 5px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 3px solid #000000;
+        background-color: #000000;
+        color: #ffffff;
+        z-index: 999;
+        cursor: pointer;
+        transform: rotate(180deg);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    #scroll-top.selected {
+        opacity: 1;
+    }
+
     .scroll-indicator {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
-        justify-content: space-around;
-        top: 0;
-        right: 10px;
-        bottom: 0;
-        width: 10px;
-        height: 100%;
+        bottom: 10px;
+        left: 5px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 3px solid #000000;
+        background-color: #000000;
+        color: #ffffff;
+        cursor: pointer;
+        z-index: 999;
+        transition: width 0.3s ease, height 0.3s ease, bottom 0.3s ease, left 0.3s ease, top 0.3s ease, right 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .scroll-indicator svg {
+        display: block;
+    }
+
+    .scroll-indicator.selected svg {
+        display: none;
+    }
+
+    .scroll-indicator.selected {
+        bottom: 4px;
+        left: 0px;
+        width: 100dvw;
+        height: 100dvh;
+        border-radius: 0;
+        border: 0;
+        background-color: #ffffff31;
+        backdrop-filter: blur(7px);
+        color: #000000;
     }
 
     .scroll-indicator-line {
+        position: relative;
+        cursor: pointer;
         width: 100%;
-        height: 10px;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100%;
+        border-radius: 0;
+        border: 0;
+        background-color: #ffffff00;
+        color: #000000;
+        opacity: 1;
+        transition: background-color 0.3s ease, border-radius 0.3s ease, opacity 0.3s ease;
     }
 
     .scroll-indicator-line::after {
-        display: none;
+        content: attr(data-tooltip);
+        text-decoration: underline;
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+        text-transform: capitalize;
+        position: relative;
+        bottom: none;
+        left: none;
+        background-color: #ffffff00;
+        color: #000000;
+        border-radius: 0;
+        margin-left: 40%;
+        margin-right: 40%;
+        border: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        font-size: 14px;
+        line-height: 0;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        pointer-events: auto;
+        transition: max-width 0.5s ease, max-height 0.5s ease, border-radius 0.5s ease, font-size 0.5s ease, color 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
+    }
+
+    .scroll-indicator-line.passed,
+    .scroll-indicator-line.selected,
+    .scroll-indicator-line,
+    .scroll-indicator-line.passed::after,
+    .scroll-indicator-line.selected::after,
+    .scroll-indicator-line::after,
+    .scroll-indicator-line.passed:hover::after,
+    .scroll-indicator-line.selected:hover::after,
+    .scroll-indicator-line:hover::after {
+        background-color: #ffffff00;
+        color: #000000;
+        border-radius: 0;
+    }
+
+    .scroll-indicator-line:hover::after {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 0;
+        transition: max-width 0.5s ease, max-height 0.5s ease, border-radius 0.5s ease, font-size 0.5s ease, color 0.1s ease;
+    }
+
+    .scroll-indicator:not(.selected) .scroll-indicator-line,
+    .scroll-indicator:not(.selected) .scroll-indicator-line::after {
+        width: 0;
+        height: 0;
+        border: 0;
+        font-size: 0;
+        opacity: 0;
+    }
+
+    .scroll-indicator-line::before {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        max-width: 0;
+        max-height: 0;
+        border-radius: 50%;
+        content: "";
+        top: 56%;
+        left: 38%;
+        transform: translate(-50%, -50%);
+        background-color: #000000;
+        z-index: 9999;
+    }
+
+    .scroll-indicator-line.selected::before {
+        max-width: 6px;
+        max-height: 6px;
     }
 
     #title > div {
         flex-direction: column;
+        gap: 3dvh;
     }
 
     #title_content {
@@ -799,6 +951,10 @@ body.lightbox-open {
     #mobile-note {
         display: block;
         color: #ff0000;
+    }
+
+    #title a {
+        margin: 2dvh 0;
     }
 
     #title a img {
