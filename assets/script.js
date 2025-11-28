@@ -155,14 +155,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Clavier
     window.addEventListener('keydown', (event) => {
-        event.preventDefault();
         if (document.body.classList.contains('lightbox-open') ||
             ((window.innerWidth < 1000 || window.innerHeight < 600) && scrollIndicator.classList.contains('selected'))) {
             return;
         }
         if (['ArrowDown', 'PageDown', ' '].includes(event.key)) {
+            event.preventDefault();
             jump(1);
         } else if (['ArrowUp', 'PageUp'].includes(event.key)) {
+            event.preventDefault();
             jump(-1);
         }
     });
@@ -343,7 +344,7 @@ window.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        lightbox.addEventListener('click', (event) => {
+        lightboxImage.addEventListener('click', (event) => {
             closeLightbox();
         });
 
