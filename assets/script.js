@@ -344,7 +344,7 @@ window.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        lightboxImage.addEventListener('click', (event) => {
+        lightbox.addEventListener('click', (event) => {
             closeLightbox();
         });
 
