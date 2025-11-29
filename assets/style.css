@@ -846,7 +846,7 @@ body.lightbox-open {
         height: 100dvh;
         border-radius: 0;
         border: 0;
-        background-color: #ffffff41;
+        background-color: #ffffffa2;
         backdrop-filter: blur(7px);
         color: #000000;
     }
@@ -931,15 +931,16 @@ body.lightbox-open {
         position: absolute;
         content: "•";
         font-size: 0;
-        top: 56%;
-        left: 38%;
+        font-weight: 700;
+        top: 53%;
+        left: 36%;
         transform: translate(-50%, -50%);
         z-index: 9999;
         transition: font-size 0.5s ease;
     }
 
     .scroll-indicator-line.selected::before {
-        font-size: 14px;
+        font-size: 24px;
     }
 
     #title > div {
