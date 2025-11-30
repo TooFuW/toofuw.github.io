@@ -327,8 +327,8 @@ body {
 /* Common layout for content panels */
 .about_content,
 .skills_content {
-    width: 80%;
-    max-width: 80%;
+    width: 90%;
+    max-width: 90%;
     margin: 0;
     display: none;
 }
@@ -754,24 +754,23 @@ body.lightbox-open {
 
 /* Project specific color codes */
 #pepite,
-#akos,
-#edt-unc,
-#robot-rover {
+#final-uni-project,
+#shortmoji {
     background-color: #a5c8ff;
 }
 #lafabrik,
-#final-uni-project,
-#shortmoji {
-    background-color: #f4b4b4;
-}
-#pacificsecurite,
 #cassini-hackaton,
 #chesscomhelper {
-    background-color: #ffeaa7;
+    background-color: #f4b4b4;
 }
-#videosafe,
+#batitech,
 #hackagou,
 #portfolio {
+    background-color: #ffeaa7;
+}
+#akos,
+#edt-unc,
+#robot-rover {
     background-color: #c5f5d3;
 }
 
@@ -988,13 +987,6 @@ body.lightbox-open {
         align-content: flex-start;
         justify-content: center;
         gap: 10px;
-        width: 90%;
-        max-width: 90%;
-    }
-
-    .skills_content.selected {
-        width: 90%;
-        max-width: 90%;
     }
 
     .content_card {
