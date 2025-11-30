@@ -1,3 +1,9 @@
+// Prevent the browser from keeping the previous scroll position on reload/back
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 window.addEventListener("DOMContentLoaded", () => {
     // Animation at the apparition of the elements
     const revealElements = document.querySelectorAll('.reveal');
