@@ -820,8 +820,8 @@ body.lightbox-open {
         flex-direction: column;
         bottom: 10px;
         left: 10px;
-        width: 28px;
-        height: 28px;
+        width: 31px;
+        height: 31px;
         border-radius: 50%;
         background-color: #000000;
         color: #ffffff;
@@ -1016,7 +1016,8 @@ body.lightbox-open {
     .project_container {
         flex-direction: column;
         justify-content: center;
-        gap: 3dvh;
+        gap: 2dvh;
+        padding-bottom: 5dvh;
     }
 
     .project_content,
