@@ -74,7 +74,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     // Modified smooth scrolling from page to page
-    const step = () => window.innerHeight + 1
+    const step = () => window.innerHeight + 1;
     let scrollIndex = Math.floor(window.scrollY / step());
 
     // Scroll indicator
@@ -351,6 +351,14 @@ window.addEventListener("DOMContentLoaded", () => {
         });
 
         lightbox.addEventListener('click', (event) => {
+            if (event.target === lightboxVideo) {
+                if (lightboxVideo.paused) {
+                    lightboxVideo.play();
+                } else {
+                    lightboxVideo.pause();
+                }
+                return;
+            }
             closeLightbox();
         });
 
