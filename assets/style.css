@@ -157,8 +157,7 @@ body {
 #switch_language {
     position: absolute;
     text-decoration: none;
-    top: 0;
-    font-size: clamp(4dvh, 4dvw, 6dvh);
+    top: 1dvh;
 }
 
 #title > div {
