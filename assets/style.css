@@ -35,7 +35,7 @@ html::-webkit-scrollbar {
 }
 
 body {
-    background-color: #fff;
+    background-color: #e5e5ea;
     color: #000;
     font-family: "Montserrat", 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
@@ -158,6 +158,7 @@ body {
     position: absolute;
     text-decoration: none;
     top: 1dvh;
+    margin: 0 !important;
 }
 
 #title > div {
@@ -165,7 +166,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 3dvw;
-    background-color: #ffffff;
     color: #000;
 }
 
@@ -356,7 +356,6 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    gap: 8px;
     flex: 1 1 45%;
     box-sizing: border-box;
     transform: translateY(0);
@@ -382,7 +381,7 @@ body {
     display: block;
     width: 40px;
     height: 3px;
-    margin-top: 6px;
+    margin-top: 3px;
     border-radius: 999px;
     background: #000000;
 }
@@ -658,10 +657,6 @@ img.tools {
 
 .project_video:hover::before {
     background: rgba(0, 0, 0, 0.35);
-}
-
-.project_video:hover::after {
-    border-left-color: #fff;
 }
 
 .project_image img:hover,
