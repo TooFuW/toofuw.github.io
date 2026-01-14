@@ -1,13 +1,602 @@
-<!-- Example content from index_fr.html --> 
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page en Français</title>
-</head>
-<body>
-    <h1>Bienvenue</h1>
-    <p>Ceci est une page en français.</p>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/style.css">
+        <script src="./assets/script.js"></script>
+        <link rel="shortcut icon" type="image/jpg" href="https://avatars.githubusercontent.com/u/137835885?s=400&u=5388d0591c47ef47ecb1d6d08a5d15059c2586b6&v=4">
+        <title>Portfolio Eyrian Muet</title>
+    </head>
+    <body>
+        <div id="scroll-top">
+            <svg width="clamp(5dvh, 5dvw, 5dvh)" height="clamp(5dvh, 5dvw, 5dvh)" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 12L12 16M12 16L16 12M12 16V8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="bloc" id="title" data-tooltip="Bienvenue">
+            <a id="switch_language" href="https://toofuw.github.io/">
+                <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/english%20flag.svg" alt="UK">
+            </a>
+            <div class="reveal">
+                <img src="https://avatars.githubusercontent.com/u/137835885?s=400&u=5388d0591c47ef47ecb1d6d08a5d15059c2586b6&v=4" alt="Icône" id="icon">
+                <div id="title_content" class="reveal">
+                    <h1>
+                        Salut, je m'appelle Eyrian Muet ! 👋
+                    </h1>
+                    <h2>
+                        Je suis un étudiant français en 3ème année de licence informatique à l'Université de Nouvelle-Calédonie.
+                    </h2>
+                    <h2>
+                        Je suis passioné par la tech et j'adore coder des petits projets en tout genre !
+                    </h2>
+                    <h3>
+                        (PS : Si vous avez une idée pour faire en sorte que ma navbar arrête de déclencher des crises d'épilepsie, je suis preneur ! 😆)
+                    </h3>
+                    <a target="_blank" href="https://github.com/TooFuW"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt=""></a>
+                    <a target="_blank" href="mailto:eyrianmuet@proton.me"><img src="https://img.shields.io/badge/ProtonMail-8B89CC?style=for-the-badge&logo=protonmail&logoColor=white" alt=""></a>
+                </div>
+            </div>
+            <svg width="clamp(5dvh, 5dvw, 5dvh)" height="clamp(5dvh, 5dvw, 5dvh)" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 12L12 16M12 16L16 12M12 16V8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="bloc reveal" id="about" data-tooltip="À propos de moi">
+            <div id="about_nav">
+                <div id="about_nav_selection"></div>
+                <div class="about_nav_button selected" id="goal" data-target="about_goal">
+                    Objectifs
+                </div>
+                <div class="about_nav_button" id="hobbies" data-target="about_hobbies">
+                    Loisirs
+                </div>
+                <div class="about_nav_button" id="languages" data-target="about_languages">
+                    Langues
+                </div>
+            </div>
+            <div id="about_content_div">
+                <div id="about_goal" class="about_content selected reveal">
+                    <div class="content_card">
+                        <div class="content_card_title">
+                            Ingénieur logiciel
+                        </div>
+                        <div class="content_card_text">
+                            Flutter a été un vrai déclic pour moi, car il réunit tout ce que j’apprécie dans le développement : penser des architectures logiques, résoudre des problèmes concrets et transformer ces solutions en applications utiles.
+                        </div>
+                    </div>
+                    <div class="content_card">
+                        <div class="content_card_title">
+                            Développeur web
+                        </div>
+                        <div class="content_card_text">
+                            J'aime créer des interfaces propres, réactives et rapides. J'aimerais développer des applications web modernes qui soient jolies, simples et intuitives à utiliser.
+                        </div>
+                    </div>
+                    <div class="content_card">
+                        <div class="content_card_title">
+                            Développeur de jeux vidéo
+                        </div>
+                        <div class="content_card_text">
+                            Les jeux vidéo sont une de mes passions et j'aimerais vraiment créer un jour mon propre jeu (d'horreur) !
+                        </div>
+                    </div>
+                </div>
+                <div id="about_hobbies" class="about_content reveal">
+                    <div class="content_card">
+                        <div class="content_card_title">
+                            Lecture
+                        </div>
+                        <div class="content_card_text">
+                            J'adore lire, surtout des romans de science-fiction, de fantasy et d'horreur, mais j'apprécie aussi d'autres genres de romans, les bandes dessinées, etc.
+                        </div>
+                    </div>
+                    <div class="content_card">
+                        <div class="content_card_title">
+                            Jeux
+                        </div>
+                        <div class="content_card_text">
+                            J'aime autant les jeux vidéo que les jeux de société. Je suis fan des jeux vidéos d'horreur immersifs et j'aime bien les jeux de société originaux et humoristiques.
+                        </div>
+                    </div>
+                    <div class="content_card">
+                        <div class="content_card_title">
+                            Sport
+                        </div>
+                        <div class="content_card_text">
+                            Je nage régulièrement, et j'aime encore plus ça quand je suis au milieu des poissons ! Je fais aussi du vélo et de la marche en famille de temps en temps.
+                        </div>
+                    </div>
+                    <div class="content_card">
+                        <div class="content_card_title">
+                            Tech / Programmation
+                        </div>
+                        <div class="content_card_text">
+                            Je suis toujours au courant des dernières actus tech (IA, innovations, gaming, etc) et j'aime coder des petits programmes qui peuvent aider mes amis ou moi-même.
+                        </div>
+                    </div>
+                </div>
+                <div id="about_languages" class="about_content reveal">
+                    <div class="content_card">
+                        <div class="content_card_title">
+                            Français
+                        </div>
+                        <div class="content_card_text">
+                            Langue maternelle, je l'utilise pour tout dans ma vie de tous les jours.
+                        </div>
+                    </div>
+                    <div class="content_card">
+                        <div class="content_card_title">
+                            Anglais
+                        </div>
+                        <div class="content_card_text">
+                            Niveau B2-C1 : j'essaie de lire, regarder des films/vidéos/séries et écrire en anglais le plus souvent possible pour m'entraîner.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bloc reveal" id="skills" data-tooltip="Compétences">
+            <div id="skills_nav">
+                <div id="skills_nav_selection"></div>
+                <div class="skills_nav_button selected" id="tech-stack" data-target="skills_languages">
+                    Compétences
+                </div>
+                <div class="skills_nav_button" id="tools" data-target="skills_tools">
+                    Outils
+                </div>
+                <div class="skills_nav_button" id="os" data-target="skills_os">
+                    OS
+                </div>
+            </div>
+            <div id="skills_content_div">
+                <div id="skills_languages" class="skills_content selected reveal">
+                    <h3>
+                        Langages de programmation que j'utilise ou que je connais :
+                    </h3>
+                    <ul class="tools">
+                        <li data-tooltip="Python"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png" alt="python" class="tools"></li>
+                        <li data-tooltip="Javascript"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/javascript%20logo.png" alt="javascript" class="tools"></li>
+                        <li data-tooltip="HTML"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/html%20logo.png" alt="html" class="tools"></li>
+                        <li data-tooltip="CSS"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/css%20logo.png" alt="css" class="tools"></li>
+                        <li data-tooltip="NextJS"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nextjs%20logo.png" alt="nextjs" class="tools"></li>
+                        <li data-tooltip="NodeJS"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nodejs%20logo.svg" alt="nodejs" class="tools"></li>
+                        <li data-tooltip="Java"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/java%20logo.png" alt="java" class="tools"></li>
+                        <li data-tooltip="Flutter"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/flutter%20logo.png" alt="flutter" class="tools"></li>
+                        <li data-tooltip="C"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/C%20logo.svg" alt="C" class="tools"></li>
+                        <li data-tooltip="MySQL"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/mysql%20logo.png" alt="mysql" class="tools"></li>
+                        <li data-tooltip="PostgreSQL"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/postgresql%20logo.svg" alt="postgresql" class="tools"></li>
+                        <li data-tooltip="Bash"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/bash%20logo.png" alt="bash" class="tools"></li>
+                        <li data-tooltip="Arduino"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/arduino%20logo.svg" alt="arduino" class="tools"></li>
+                        <li data-tooltip="Prolog"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/prolog%20logo.svg" alt="prolog" class="tools"></li>
+                    </ul>
+                </div>
+                <div id="skills_tools" class="skills_content reveal">
+                    <h3>
+                        Outils que j'utilise ou que je connais :
+                    </h3>
+                    <ul class="tools">
+                        <li data-tooltip="Microsoft Office"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/microsoft%20office%20logo.svg" alt="microsoft office" class="tools"></li>
+                        <li data-tooltip="VSCode"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/vscode%20logo.png" alt="vscode" class="tools"></li>
+                        <li data-tooltip="Android Studio"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/android%20studio%20logo.svg" alt="android studio" class="tools"></li>
+                        <li data-tooltip="Github"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/github%20logo.png" alt="github" class="tools"></li>
+                        <li data-tooltip="Canva"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/canva%20logo.png" alt="canva" class="tools"></li>
+                        <li data-tooltip="Unreal Engine"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/unreal%20engine%20logo.png" alt="unreal engine" class="tools"></li>
+                        <li data-tooltip="Xampp"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/xampp%20logo.png" alt="xampp" class="tools"></li>
+                        <li data-tooltip="Shopify"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/shopify%20logo.png" alt="shopify" class="tools"></li>
+                        <li data-tooltip="Wordpress"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/wordpress%20logo.png" alt="wordpress" class="tools"></li>
+                        <li data-tooltip="Miro"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/miro%20logo.png" alt="miro" class="tools"></li>
+                        <li data-tooltip="Oracle Virtualbox"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/virtualbox%20logo.png" alt="oracle virtualbox" class="tools"></li>
+                        <li data-tooltip="Postman"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/postman%20logo.svg" alt="postman" class="tools"></li>
+                        <li data-tooltip="IAs"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/chatgpt%20logo.svg" alt="chatgpt" class="tools"></li>
+                    </ul>
+                </div>
+                <div id="skills_os" class="skills_content reveal">
+                    <h3>
+                        OS que j'utilise ou que je connais :
+                    </h3>
+                    <ul class="tools">
+                        <li data-tooltip="Windows"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/windows%20logo.png" alt="windows" class="tools"></li>
+                        <li data-tooltip="Linux"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/linux%20logo.png" alt="linux" class="tools"></li>
+                        <li data-tooltip="MacOS"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/mac%20logo.png" alt="macos" class="tools"></li>
+                        <li data-tooltip="Android"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/android%20logo.png" alt="android" class="tools"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bloc project" id="pepite" data-tooltip="Pépite">
+            <div class="project_container">
+                <div class="project_content reveal">
+                    <h2>Pépite - Projet BONUS</h2>
+                    <ul class="tech_used">
+                        <li data-tooltip="Flutter"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/flutter%20logo.png" alt="flutter"></li>
+                        <li data-tooltip="NextJS"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nextjs%20logo.png" alt="nextjs"></li>
+                        <li data-tooltip="NodeJS"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nodejs%20logo.svg" alt="nodejs"></li>
+                    </ul>
+                    <ul class="reveal">
+                        <li>
+                            Projet développé dans le cadre du programme <b>Pépite Nouvelle Calédonie</b>, où un ami et moi concevons un système qui centralise les cartes de fidélité et les offres en Nouvelle-Calédonie.
+                        </li>
+                        <li>
+                            Nous avons développé une application mobile multiplateforme avec <b>Flutter</b>, un backoffice web avec <b>NextJS</b>, un backend <b>NodeJS</b> et un site vitrine.
+                        </li>
+                        <li>
+                            Le programme Pépite nous a apporté un accompagnement ciblé sur la <b>conception de business models</b>, la <b>préparation de business plans</b> et plus largement, les <b>fondamentaux de l'entrepreneuriat</b>.
+                        </li>
+                        <li>
+                            Après une année de travail, nous sommes devenus <b>lauréats du Prix Pépite</b> et avons obtenu la <b>4ème place</b>.
+                        </li>
+                    </ul>
+                </div>
+                <div class="project_ressources reveal">
+                    <div class="project_image">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/pepite.jpg" alt="Logo">
+                        <div class="project_video">
+                            <video muted preload="auto" autoplay loop poster="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/bonus%20logo.png">
+                                <source src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/bonus.mp4" type="video/mp4">
+                                Votre navigateur ne prend pas en charge la balise vidéo.
+                            </video>
+                        </div>
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/bonus%20backoffice.png" alt="Backoffice">
+                    </div>
+                    <div class="project_links">
+                        <a target="_blank" href="https://bonus.nc/">Bonus</a>
+                        <a target="_blank" href="https://pepite.unc.nc/">Pépite Nouvelle Calédonie</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bloc project" id="lafabrik" data-tooltip="La Fabrik">
+            <div class="project_container">
+                <div class="project_content reveal">
+                    <h2>Stage - La Fabrik</h2>
+                    <ul class="tech_used">
+                        <li data-tooltip="NextJS"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nextjs%20logo.png" alt="nextjs"></li>
+                    </ul>
+                    <ul class="reveal">
+                        <li>
+                            Stage de 3e année dans une agence de développement locale, <b>La Fabrik</b>, pendant 3 mois.
+                        </li>
+                        <li>
+                            Conception et développement de A à Z du <b>module de cartographie front-end</b> pour le nouveau site de <b>Tanéo</b> avec un <b>rendu côté serveur</b> et des couches cartographiques personnalisées.
+                        </li>
+                        <li>
+                            Intégration des données de transport en commun en temps réel <b>GTFS/SIRI</b> via une <b>API web</b> dédiée.
+                        </li>
+                        <li>
+                            Mise en place d'un pipeline <b>CI/CD</b> avec Gitlab, Docker et Kubernetes, et <b>déploiement continu</b> sur les environnements de développement et de préproduction.
+                        </li>
+                    </ul>
+                </div>
+                <div class="project_ressources reveal">
+                    <div class="project_image">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/lafabrik%20logo.svg" alt="La Fabrik">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/taneo%201.png" alt="Tanéo Map Ligne">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/taneo%202.png" alt="Tanéo Map Stop">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/taneo%203.png" alt="Tanéo Map Mobile">
+                    </div>
+                    <div class="project_links">
+                        <a target="_blank" href="https://www.la-fabrik.nc/">La Fabrik</a>
+                        <a target="_blank" href="https://www.taneo.nc/carte">Carte Tanéo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bloc project" id="batitech" data-tooltip="Batitech">
+            <div class="project_container">
+                <div class="project_content reveal">
+                    <h2>Batitech</h2>
+                    <ul class="tech_used">
+                        <li data-tooltip="Shopify"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/shopify%20logo.png" alt="shopify"></li>
+                        <li data-tooltip="Wordpress"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/wordpress%20logo.png" alt="wordpress"></li>
+                        <li data-tooltip="Python"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png" alt="python"></li>
+                    </ul>
+                    <ul class="reveal">
+                        <li>
+                            Création de <b>PacificSecurite</b> (boutique en ligne Shopify pour du matériel de sécurité) et de <b>Videosafe</b> (site Wordpress pour des services de stockage vidéo).
+                        </li>
+                        <li>
+                            Intégration d'un chatbot IA avec <b>Tidio</b> pour le support client automatisé (PacificSecurite).
+                        </li>
+                        <li>
+                            Déploiement de <b>Synchroteam</b> (recherche de solution, mise en place et formation du personnel).
+                        </li>
+                        <li>
+                            Développement d'une application <b>Python (Tkinter)</b> utilisant l'<b>API Synchroteam</b> pour automatiser la création de tâches pour les techniciens.
+                        </li>
+                        <li>
+                            Mise en place d'un <b>serveur Dahua</b> pour préparer et configurer le stockage de la vidéosurveillance.
+                        </li>
+                    </ul>
+                </div>
+                <div class="project_ressources reveal">
+                    <div class="project_image">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/batitech.jpg" alt="Batitech">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/pacificsecurite.png" alt="PacificSecurite">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/videosafe.png" alt="VideoSafe">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/batitech%20app.png" alt="App">
+                    </div>
+                    <div class="project_links">
+                        <a target="_blank" href="https://www.tidio.com/">Tidio</a>
+                        <a target="_blank" href="https://www.facebook.com/BatitechNouvelleCaledonie">Batitech</a>
+                        <a target="_blank" href="https://videosafe.pacificsecurite.nc/">VideoSafe</a>
+                        <a target="_blank" href="https://github.com/TooFuW/Batitech">Batitech App</a>
+                        <a target="_blank" href="https://www.synchroteam.com/">Synchroteam</a>
+                        <a target="_blank" href="https://pacificsecurite.nc/">PacificSecurite</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bloc project" id="akos" data-tooltip="AKOS">
+            <div class="project_container">
+                <div class="project_content reveal">
+                    <h2>AKOS</h2>
+                    <ul class="tech_used">
+                        <li data-tooltip="Shopify"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/shopify%20logo.png" alt="shopify"></li>
+                    </ul>
+                    <ul class="reveal">
+                        <li>
+                            Création d'une boutique <b>Shopify</b> pour des produits sur le thème de la fantasy, avec une navigation simple et un parcours d'achat fluide.
+                        </li>
+                    </ul>
+                </div>
+                <div class="project_ressources reveal">
+                    <div class="project_image">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/akos%20logo.webp" alt="AKOS">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/akos.png" alt="Website">
+                    </div>
+                    <div class="project_links">
+                        <a target="_blank" href="https://akos.nc/">AKOS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bloc project" id="final-uni-project" data-tooltip="CNN Pytorch">
+            <div class="project_container">
+                <div class="project_content reveal">
+                    <h2>Projet de fin d'études</h2>
+                    <ul class="tech_used">
+                        <li data-tooltip="Python"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png" alt="python"></li>
+                    </ul>
+                    <ul class="reveal">
+                        <li>
+                            Développement d'une architecture <b>IA CNN</b> (réseau de neurones convolutifs) avec <b>PyTorch</b> pour estimer l'âge des moustiques à partir de spectres MALDI-TOF, sur la base des travaux de la Professeure Nazha Selmaoui-Folcher.
+                        </li>
+                        <li>
+                            Création d'une interface <b>Tkinter</b> pour lancer les analyses à partir de listes de données et de modèles, puis afficher et analyser les résultats.
+                        </li>
+                    </ul>
+                </div>
+                <div class="project_ressources reveal">
+                    <div class="project_image">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/interface%20cnn.png" alt="Interface">
+                    </div>
+                    <div class="project_links">
+                        <a target="_blank" href="https://github.com/TooFuW/projet_tutore_moustiques">Github</a>
+                        <a target="_blank" href="https://www.nature.com/articles/s41598-021-00888-1">Référence de l'article de recherche</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bloc project" id="cassini-hackaton" data-tooltip="Cassini hackathon">
+            <div class="project_container">
+                <div class="project_content reveal">
+                    <h2>CASSINI HACKATHON 10ème édition</h2>
+                    <ul class="tech_used">
+                        <li data-tooltip="NextJS"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nextjs%20logo.png" alt="nextjs"></li>
+                        <li data-tooltip="NodeJS"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nodejs%20logo.svg" alt="nodejs"></li>
+                        <li data-tooltip="Python"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png" alt="python"></li>
+                    </ul>
+                    <ul class="reveal">
+                        <li>
+                            J'y ai participé avec 3 amis, on y a présenté <b>Tradhelm</b>, un jeu de stratégie multijoueur centré sur les accords, les échanges et les trahisons pour gagner.
+                        </li>
+                        <li>
+                            Nous avons utilisé les <b>données satellites de Copernicus</b> (biomes, forêts, eau, températures) via son API pour générer les ressources sur la carte du jeu et simuler la Terre.
+                        </li>
+                        <li>
+                            Classé <b>1er en Nouvelle-Calédonie</b> et <b>5ème en Europe/Mondial</b>.
+                        </li>
+                    </ul>
+                </div>
+                <div class="project_ressources reveal">
+                    <div class="project_image">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/cassinihackaton%20logo.png" alt="CASSINI HACKATON - TRADHELM">
+                    </div>
+                    <div class="project_links">
+                        <a target="_blank" href="https://github.com/Superpasteque213/tradelhm-backend">Backend</a>
+                        <a target="_blank" href="https://github.com/TooFuW/tradhelm">Frontend</a>
+                        <a target="_blank" href="https://taikai.network/cassinihackathons/hackathons/eu-space-consumer-experience/projects/cmh890hy102pcgs2wj7v9q90k/idea">Tradhelm</a>
+                        <a target="_blank" href="https://taikai.network/cassinihackathons/hackathons/eu-space-consumer-experience">CASSINI HACKATON</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bloc project" id="hackagou" data-tooltip="Hackagou">
+            <div class="project_container">
+                <div class="project_content reveal">
+                    <h2>Hackagou</h2>
+                    <ul class="tech_used">
+                    </ul>
+                    <ul class="reveal">
+                        <li>
+                            Hackagou est une compétition <b>CTF</b> en équipe, organisée chaque année en Nouvelle-Calédonie.
+                        </li>
+                        <li>
+                            Édition 2023 : <b>6ème place</b> dans la catégorie étudiants.
+                        </li>
+                        <li>
+                            Édition 2024 : <b>4ème place</b> dans la catégorie étudiants et <b>premiers à trouver le flag le plus difficile</b> toutes catégories confondues (professionnels et étudiants).
+                        </li>
+                        <li>
+                            Édition 2025 : <b>en tête de la catégorie étudiants</b> du début à la fin et <b>presque ex-æquo avec la première équipe professionnelle</b>.
+                        </li>
+                    </ul>
+                </div>
+                <div class="project_ressources reveal">
+                    <div class="project_image">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/hackagou.png" alt="Hackagou">
+                    </div>
+                    <div class="project_links">
+                        <a target="_blank" href="https://hackagou.nc/">Hackagou</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bloc project" id="edt-unc" data-tooltip="EDT UNC">
+            <div class="project_container">
+                <div class="project_content reveal">
+                    <h2>EDT UNC</h2>
+                    <ul class="tech_used">
+                        <li data-tooltip="Flutter"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/flutter%20logo.png" alt="flutter"></li>
+                    </ul>
+                    <ul class="reveal">
+                        <li>
+                            Développement d'une application <b>Flutter</b> pour consulter les EDT de l'Université de la Nouvelle-Calédonie directement à partir des fichiers <b>ICS</b> officiels (le site officiel quant à lui est bien trop lent et pas très beau).
+                        </li>
+                        <li>
+                            Inclut des fonctionnalités utiles comme un <b>mode hors ligne</b>, un système <b>multi-comptes</b> et la prise en charge des <b>gestes de naviguation</b>.
+                        </li>
+                        <li>
+                            Application publiée sur le <b>Google Play Store</b> et également <b>disponible en ligne</b>.
+                        </li>
+                    </ul>
+                </div>
+                <div class="project_ressources reveal">
+                    <div class="project_image">
+                        <img src="https://raw.githubusercontent.com/TooFuW/appli_edt_univ/main/assets/images/app_icon.png" alt="EDT UNC">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/edt%20unc.webp" alt="App">
+                    </div>
+                    <div class="project_links">
+                        <a target="_blank" href="https://github.com/TooFuW/appli_edt_univ">Github</a>
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=nc.edt_unc.appli_edt_univ">Play Store</a>
+                        <a target="_blank" href="https://toofuw.github.io/appli_edt_univ/">Version en ligne</a> (principalement pour les utilisateurs Apple)
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bloc project" id="shortmoji" data-tooltip="ShortMoji">
+            <div class="project_container">
+                <div class="project_content reveal">
+                    <h2>ShortMoji</h2>
+                    <ul class="tech_used">
+                        <li data-tooltip="Python"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png" alt="python"></li>
+                    </ul>
+                    <ul class="reveal">
+                        <li>
+                            Création d'un petit programme <b>Python</b> permettant d'insérer des emojis et des caractères spéciaux partout avec de simples raccourcis clavier.
+                        </li>
+                        <li>
+                            J'ai mis en place une <b>customisation très simple</b> du programme via un fichier JSON et un <b>système de correction rapide</b> (pour ne pas bloquer si l'utilisateur fait une typo).
+                        </li>
+                        <li>
+                            Pensé pour reproduire le système d'émojis de <b>Discord</b> sur tout l'ordinateur.
+                        </li>
+                    </ul>
+                </div>
+                <div class="project_ressources reveal">
+                    <div class="project_image">
+                        <img src="https://raw.githubusercontent.com/TooFuW/ShortMoji/main/img/icon.png" alt="ShortMoji">
+                        <img src="https://raw.githubusercontent.com/TooFuW/ShortMoji/main/img/ShortMojiGif.gif" alt="ShortMoji">
+                    </div>
+                    <div class="project_links">
+                        <a target="_blank" href="https://github.com/TooFuW/ShortMoji">Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bloc project" id="chesscomhelper" data-tooltip="ChessCom Helper">
+            <div class="project_container">
+                <div class="project_content reveal">
+                    <h2>ChessComHelper</h2>
+                    <ul class="tech_used">
+                        <li data-tooltip="JavaScript"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/javascript%20logo.png" alt="javascript"></li>
+                    </ul>
+                    <ul class="reveal">
+                        <li>
+                            Développement d'une <b>extension Chrome</b> qui surligne automatiquement les pièces menacées sur <a target="_blank" href="https://www.chess.com/">chess.com</a>.
+                        </li>
+                        <li>
+                            Affiche des <b>alertes instantanées</b> pour les pièces attaquées et met en évidence les positions faibles ou non protégées.
+                        </li>
+                        <li>
+                            Aide les joueurs à <b>réduire leurs erreurs</b> et à <b>analyser l'échiquier plus rapidement</b> (à but éducatif bien évidemment 🤓).
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="project_ressources reveal">
+                    <div class="project_image">
+                        <img src="https://raw.githubusercontent.com/TooFuW/ChromeExtension_ChessComHelper/main/images/example.png" alt="ChessComHelper">
+                    </div>
+                    <div class="project_links">
+                        <a target="_blank" href="https://github.com/TooFuW/ChromeExtension_ChessComHelper/">Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bloc project" id="robot-rover" data-tooltip="Robot ROVER">
+            <div class="project_container">
+                <div class="project_content reveal">
+                    <h2>Projet scolaire - Robot ROVER</h2>
+                    <ul class="tech_used">
+                        <li data-tooltip="Arduino"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/arduino%20logo.svg" alt="arduino"></li>
+                    </ul>
+                    <ul class="reveal">
+                        <li>
+                            Conception d'un robot rover à chenilles piloté en <b>Bluetooth</b> depuis une application mobile.
+                        </li>
+                        <li>
+                            Programmation de l'<b>Arduino</b> avec des motor shields pour contrôler les déplacements du rover.
+                        </li>
+                    </ul>
+                </div>
+                <div class="project_ressources reveal">
+                    <div class="project_image">
+                        <img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/rover.jpg" alt="Rover">
+                        <div class="project_video">
+                            <video muted preload="auto" autoplay loop poster="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/rover%20poster.jpg">
+                                <source src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/rover%20video.mov" type="video/quicktime">
+                                Votre navigateur ne prend pas en charge la balise vidéo.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bloc project" id="portfolio" data-tooltip="Portfolio">
+            <div class="project_container">
+                <div class="project_content reveal">
+                    <h2>Portfolio</h2>
+                    <ul class="tech_used">
+                        <li data-tooltip="HTML"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/html%20logo.png" alt="html"></li>
+                        <li data-tooltip="CSS"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/css%20logo.png" alt="css"></li>
+                        <li data-tooltip="Javascript"><img src="https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/javascript%20logo.png" alt="javascript"></li>
+                    </ul>
+                    <ul class="reveal">
+                        <li>
+                            J'ai codé ce portfolio à la main pour m'entraîner en <b>HTML</b>, <b>CSS</b> et <b>JavaScript</b> vanilla.
+                        </li>
+                        <li>
+                            L'objectif était de me <b>lancer un défi créatif</b> et de <b>présenter mon travail</b> de manière propre, tout en utilisant l'IA le moins possible pour garder quelque chose de personnel.
+                        </li>
+                        <li>
+                            Ce portfolio me sert à présenter mes <b>projets préférés</b> ainsi que <b>les plus importants</b>, mais vous pouvez trouver plus de mini projets sur mon Github !
+                        </li>
+                    </ul>
+                </div>
+                <div class="project_ressources reveal">
+                    <div class="project_image">
+                    </div>
+                    <div class="project_links">
+                        <a target="_blank" href="https://github.com/TooFuW/toofuw.github.io">Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="image-lightbox" class="image-lightbox">
+            <img class="lightbox-media" src="" alt="">
+            <video class="lightbox-media" controls playsinline loop muted autoplay preload="auto"></video>
+        </div>
+    </body>
 </html>
