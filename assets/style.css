@@ -500,7 +500,8 @@ ul.tools li:hover::after,
     visibility: visible;
 }
 
-ul.tools li:hover {
+ul.tools li:hover,
+.tech_used img:hover {
     transform: translateY(-5px);
 }
 
@@ -555,15 +556,10 @@ img.tools {
     position: relative;
     transition: all 0.2s ease;
 }
+
 .tech_used img {
     height: 5dvh;
-    filter: drop-shadow(0.1dvh 0.1dvh 0 rgba(0, 0, 0, 0.7));
-    transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-.tech_used img:hover {
-    filter: drop-shadow(1.1dvh 1.1dvh 0 rgba(0, 0, 0, 0.7));
-    transform: translateY(-1dvh);
+    transition: all 0.2s ease;
 }
 
 .project_content ul {
