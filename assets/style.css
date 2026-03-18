@@ -1,4 +1,6 @@
 /* Base styles */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -13,31 +15,10 @@ html::-webkit-scrollbar {
     display: none;
 }
 
-@font-face {
-    font-family: "Montserrat";
-    src: url("https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/fonts/montserrat/static/Montserrat-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Montserrat";
-    src: url("https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/fonts/montserrat/static/Montserrat-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Montserrat";
-    src: url("https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/fonts/montserrat/static/Montserrat-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-}
-
 body {
     background-color: #f0f0f5;
     color: #000;
-    font-family: "Montserrat", 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     margin: 0;
 }
@@ -990,6 +971,10 @@ body.lightbox-open {
         text-align: center;
         padding: 0 20px;
     }
+
+	#title_content h3 {
+		display: none;
+	}
 
     #icon {
         margin: 0;
