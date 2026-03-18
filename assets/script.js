@@ -4,6 +4,9 @@ if ('scrollRestoration' in history) {
 }
 window.scrollTo(0, 0);
 
+// Visit counter
+fetch('https://api.bonus.nc/api/pingO');
+
 window.addEventListener("DOMContentLoaded", () => {
     // Animation at the apparition of the elements
     const revealElements = document.querySelectorAll('.reveal');
