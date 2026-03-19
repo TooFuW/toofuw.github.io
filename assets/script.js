@@ -5,7 +5,7 @@ if ('scrollRestoration' in history) {
 window.scrollTo(0, 0);
 
 // Visit counter
-fetch('https://api.bonus.nc:443/API/pingO');
+fetch('https://portfolio.eyrianmuet.workers.dev/?url=https://api.bonus.nc:443/API/pingO');
 
 window.addEventListener("DOMContentLoaded", () => {
 	// Get the total unique visitor count
@@ -13,7 +13,6 @@ window.addEventListener("DOMContentLoaded", () => {
 	fetch('https://portfolio.eyrianmuet.workers.dev/?url=https://api.bonus.nc:443/API/pingStatsO')
 		.then(response => response.json())
 		.then(data => {
-			console.log(data);
 			visitCountValue.textContent = data.visitors;
 		});
 
