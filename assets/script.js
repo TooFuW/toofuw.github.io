@@ -5,9 +5,18 @@ if ('scrollRestoration' in history) {
 window.scrollTo(0, 0);
 
 // Visit counter
-fetch('https://api.bonus.nc/api/pingO');
+fetch('https://api.bonus.nc:443/API/pingO');
 
 window.addEventListener("DOMContentLoaded", () => {
+	// Get the total unique visitor count
+	const visitCountValue = document.querySelector('#visit_count_value');
+	fetch('https://portfolio.eyrianmuet.workers.dev/?url=https://api.bonus.nc:443/API/pingStatsO')
+		.then(response => response.json())
+		.then(data => {
+			console.log(data);
+			visitCountValue.textContent = data.visitors;
+		});
+
     // Animation at the apparition of the elements
     const revealElements = document.querySelectorAll('.reveal');
 
