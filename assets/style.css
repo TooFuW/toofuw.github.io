@@ -138,7 +138,7 @@ body {
 #switch_language {
     position: absolute;
     text-decoration: none;
-    top: 5dvh;
+    top: 8px;
     margin: 0 !important;
 }
 
@@ -156,7 +156,7 @@ body {
 	justify-content: flex-start;
 	align-items: flex-start;
 	position: absolute;
-	top: 1dvh;
+	top: 7dvh;
 	background-color: #fff;
 	border-radius: 20px;
 	padding: 5px 10px;
