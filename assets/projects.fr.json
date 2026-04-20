@@ -228,7 +228,8 @@
     "tooltip": "Discord AI Bot",
     "title": "Discord AI Bot",
     "tech": [
-      {"tooltip": "Python", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png", "alt": "python"}
+      {"tooltip": "Python", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png", "alt": "python"},
+      {"tooltip": "Ollama", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/ollama%20logo.svg", "alt": "ollama"}
     ],
     "bullets": [
       "Bot Discord propulsé par l'<b>IA</b> qui participe aux conversations, répond aux mentions et intervient aléatoirement dans les discussions.",
