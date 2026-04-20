@@ -788,22 +788,24 @@ body.lightbox-open {
 /* Project specific color codes */
 #pepite,
 #final-uni-project,
-#shortmoji {
+#shortmoji,
+#robot-rover {
     background-color: #a5c8ff;
 }
 #lafabrik,
 #cassini-hackaton,
-#chesscomhelper {
+#emailtracker,
+#portfolio {
     background-color: #f4b4b4;
 }
 #batitech,
 #hackagou,
-#robot-rover {
+#discord-ai-bot {
     background-color: #ffeaa7;
 }
 #akos,
 #edt-unc,
-#portfolio {
+#chesscomhelper {
     background-color: #c5f5d3;
 }
 

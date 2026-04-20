@@ -217,7 +217,10 @@
       "Extension <b>Chrome</b> pour générer les pixels de suivi, consulter les statistiques et s'intégrer directement dans les compositeurs de <b>ProtonMail</b> et <b>Gmail</b>."
     ],
     "media": [
-      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/EmailTracker/main/extension/images/icon-128.png", "alt": "EmailTracker"}
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/emailtracker/main/Extension_popup.png", "alt": "EmailTracker Extension Popup"},
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/emailtracker/main/Protonmail_integration.png", "alt": "EmailTracker Protonmail integration"},
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/emailtracker/main/Gmail_integration.png", "alt": "EmailTracker Gmail integration"},
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/emailtracker/main/extension/images/icon-128.png", "alt": "EmailTracker"}
     ],
     "links": [
       {"href": "https://github.com/TooFuW/EmailTracker", "text": "Github"}
@@ -229,7 +232,7 @@
     "title": "Discord AI Bot",
     "tech": [
       {"tooltip": "Python", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png", "alt": "python"},
-      {"tooltip": "Ollama", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/ollama%20logo.svg", "alt": "ollama"}
+      {"tooltip": "Ollama", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/ollama%20logo.png", "alt": "ollama"}
     ],
     "bullets": [
       "Bot Discord propulsé par l'<b>IA</b> qui participe aux conversations, répond aux mentions et intervient aléatoirement dans les discussions.",
