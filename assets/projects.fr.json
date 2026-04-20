@@ -16,9 +16,9 @@
     ],
     "media": [
       {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/pepite.jpg", "alt": "Logo Pépite"},
-      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/bonus.jpg", "alt": "Logo Bonus"},
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/bonus.webp", "alt": "Logo Bonus"},
       {"type": "video", "poster": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/bonus%20logo.png", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/demo_bonus.mp4", "mime": "video/mp4", "fallback": "Votre navigateur ne prend pas en charge la balise vidéo."},
-      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/bonus%20backoffice.png", "alt": "Backoffice"}
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/bonus%20backoffice.webp", "alt": "Backoffice"}
     ],
     "links": [
       {"href": "https://bonus.nc/", "text": "Bonus"},
