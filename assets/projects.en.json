@@ -1,0 +1,299 @@
+[
+  {
+    "id": "pepite",
+    "tooltip": "Pépite",
+    "title": "Pépite - BONUS Project",
+    "tech": [
+      {"tooltip": "Flutter", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/flutter%20logo.png", "alt": "flutter"},
+      {"tooltip": "NextJS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nextjs%20logo.png", "alt": "nextjs"},
+      {"tooltip": "NodeJS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nodejs%20logo.svg", "alt": "nodejs"}
+    ],
+    "bullets": [
+      "Project started within the <b>Pépite Nouvelle Calédonie</b> program, where a friend and I are building a system that centralizes loyalty cards and offers in New Caledonia.",
+      "We are building a multiplatform mobile app with <b>Flutter</b>, a web backoffice with <b>NextJS</b>, a <b>NodeJS</b> backend, and a landing page.",
+      "The Pépite program provided targeted mentorship in <b>business model design</b>, <b>business planning</b>, and key <b>entrepreneurship fundamentals</b>.",
+      "After a year of work, we became <b>Pépite Prize laureates</b>, earning <b>4th place</b>."
+    ],
+    "media": [
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/pepite.jpg", "alt": "Pépite Logo"},
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/bonus.jpg", "alt": "Bonus Logo"},
+      {"type": "video", "poster": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/bonus%20logo.png", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/demo_bonus.mp4", "mime": "video/mp4", "fallback": "Your browser does not support the video tag."},
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/bonus%20backoffice.png", "alt": "Backoffice"}
+    ],
+    "links": [
+      {"href": "https://bonus.nc/", "text": "Bonus"},
+      {"href": "https://pepite.unc.nc/", "text": "Pépite Nouvelle Calédonie"}
+    ]
+  },
+  {
+    "id": "lafabrik",
+    "tooltip": "La Fabrik",
+    "title": "Internship - La Fabrik",
+    "tech": [
+      {"tooltip": "NextJS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nextjs%20logo.png", "alt": "nextjs"}
+    ],
+    "bullets": [
+      "3rd year internship in a local dev agency, <b>La Fabrik</b>, for 3 months.",
+      "Developed from the ground up the <b>front-end mapping module</b> for <b>Tanéo</b>'s new website with <b>server-side rendering</b> and custom map layers.",
+      "Streamed real-time <b>GTFS/SIRI</b> public transport data through a dedicated <b>web API</b>.",
+      "Implementation of a <b>CI/CD pipeline</b> with Gitlab, Docker and Kubernetes, with a <b>continuous deployment</b> to development and pre-production environments."
+    ],
+    "media": [
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/lafabrik%20logo.svg", "alt": "La Fabrik"},
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/taneo%201.png", "alt": "Tanéo Map Ligne"},
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/taneo%202.png", "alt": "Tanéo Map Stop"},
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/taneo%203.png", "alt": "Tanéo Map Mobile"}
+    ],
+    "links": [
+      {"href": "https://www.la-fabrik.nc/", "text": "La Fabrik"},
+      {"href": "https://www.taneo.nc/carte", "text": "Tanéo Map"}
+    ]
+  },
+  {
+    "id": "batitech",
+    "tooltip": "Batitech",
+    "title": "Batitech",
+    "tech": [
+      {"tooltip": "Shopify", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/shopify%20logo.png", "alt": "shopify"},
+      {"tooltip": "Wordpress", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/wordpress%20logo.png", "alt": "wordpress"},
+      {"tooltip": "Python", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png", "alt": "python"}
+    ],
+    "bullets": [
+      "Built <b>PacificSecurite</b> (Shopify e-commerce for security equipment) and <b>Videosafe</b> (Wordpress site for video storage services).",
+      "Integrated an AI chatbot with <b>Tidio</b> for automated customer support (PacificSecurite).",
+      "Deployed <b>Synchroteam</b> (tool selection, implementation and staff training).",
+      "Developed a <b>Python (Tkinter)</b> app using the <b>Synchroteam API</b> to automate technician tasks.",
+      "Set up a <b>Dahua server</b> to configure the video surveillance storage system."
+    ],
+    "media": [
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/batitech.jpg", "alt": "Batitech"},
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/pacificsecurite.png", "alt": "PacificSecurite"},
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/videosafe.png", "alt": "VideoSafe"},
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/batitech%20app.png", "alt": "App"}
+    ],
+    "links": [
+      {"href": "https://www.tidio.com/", "text": "Tidio"},
+      {"href": "https://www.facebook.com/BatitechNouvelleCaledonie", "text": "Batitech"},
+      {"href": "https://videosafe.pacificsecurite.nc/", "text": "VideoSafe"},
+      {"href": "https://github.com/TooFuW/Batitech", "text": "Batitech App"},
+      {"href": "https://www.synchroteam.com/", "text": "Synchroteam"},
+      {"href": "https://pacificsecurite.nc/", "text": "PacificSecurite"}
+    ]
+  },
+  {
+    "id": "akos",
+    "tooltip": "AKOS",
+    "title": "AKOS",
+    "tech": [
+      {"tooltip": "Shopify", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/shopify%20logo.png", "alt": "shopify"}
+    ],
+    "bullets": [
+      "Built a <b>Shopify</b> storefront for fantasy-themed products with straightforward browsing and checkout."
+    ],
+    "media": [
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/akos%20logo.webp", "alt": "AKOS"},
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/akos.png", "alt": "Website"}
+    ],
+    "links": [
+      {"href": "https://akos.nc/", "text": "AKOS"}
+    ]
+  },
+  {
+    "id": "final-uni-project",
+    "tooltip": "CNN Pytorch",
+    "title": "Final University Project",
+    "tech": [
+      {"tooltip": "Python", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png", "alt": "python"}
+    ],
+    "bullets": [
+      "Developed an <b>AI CNN</b> (Convolutional Neural Network) architecture in <b>PyTorch</b> to estimate mosquito age from MALDI-TOF spectra, based on Professor Nazha Selmaoui-Folcher's research.",
+      "Created a <b>Tkinter</b> interface to run analyses using data lists and models, then display and analyse the results."
+    ],
+    "media": [
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/interface%20cnn.png", "alt": "Interface"}
+    ],
+    "links": [
+      {"href": "https://github.com/TooFuW/projet_tutore_moustiques", "text": "Github"},
+      {"href": "https://www.nature.com/articles/s41598-021-00888-1", "text": "Research reference"}
+    ]
+  },
+  {
+    "id": "cassini-hackaton",
+    "tooltip": "Cassini hackathon",
+    "title": "CASSINI HACKATON 10th Edition",
+    "tech": [
+      {"tooltip": "NextJS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nextjs%20logo.png", "alt": "nextjs"},
+      {"tooltip": "NodeJS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nodejs%20logo.svg", "alt": "nodejs"},
+      {"tooltip": "Python", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png", "alt": "python"}
+    ],
+    "bullets": [
+      "Participated with 3 friends, presenting <b>Tradhelm</b>, a multiplayer strategy game emphasizing agreements, trades and betrayal to win.",
+      "We used <b>Copernicus satellite data</b> (biomes, forests, water, temperatures) via it's API to generate resources on the game map to simulate Earth.",
+      "Placed <b>1st in New Caledonia</b> and <b>5th in Europe/worldwide</b>."
+    ],
+    "media": [
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/cassinihackaton%20logo.png", "alt": "CASSINI HACKATON - TRADHELM"}
+    ],
+    "links": [
+      {"href": "https://github.com/Superpasteque213/tradelhm-backend", "text": "Backend"},
+      {"href": "https://github.com/TooFuW/tradhelm", "text": "Frontend"},
+      {"href": "https://taikai.network/cassinihackathons/hackathons/eu-space-consumer-experience/projects/cmh890hy102pcgs2wj7v9q90k/idea", "text": "Tradhelm"},
+      {"href": "https://taikai.network/cassinihackathons/hackathons/eu-space-consumer-experience", "text": "CASSINI HACKATON"}
+    ]
+  },
+  {
+    "id": "hackagou",
+    "tooltip": "Hackagou",
+    "title": "Hackagou",
+    "tech": [],
+    "bullets": [
+      "Hackagou is a yearly team <b>CTF competition</b> in New Caledonia.",
+      "2023 edition: placed <b>6th</b> in the student category.",
+      "2024 edition: placed <b>4th</b> in the student category and <b>found the hardest flag first</b> across all categories (professionals and students).",
+      "2025 edition: <b>led the student category</b> throughout and finished <b>almost ex-æquo with the first professional team</b>."
+    ],
+    "media": [
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/hackagou.png", "alt": "Hackagou"}
+    ],
+    "links": [
+      {"href": "https://hackagou.nc/", "text": "Hackagou"}
+    ]
+  },
+  {
+    "id": "edt-unc",
+    "tooltip": "EDT UNC",
+    "title": "EDT UNC",
+    "tech": [
+      {"tooltip": "Flutter", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/flutter%20logo.png", "alt": "flutter"}
+    ],
+    "bullets": [
+      "Built a <b>Flutter</b> app to consult University of New Caledonia timetables directly from the official <b>ICS</b> files (the official website is way too slow and a bit ugly).",
+      "Includes useful features such as an <b>offline mode</b>, a <b>multi-account</b> system, and support for <b>swipe gestures</b>.",
+      "Application published on the <b>Google Play Store</b> and <b>available online</b>."
+    ],
+    "media": [
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/appli_edt_univ/main/assets/images/app_icon.png", "alt": "EDT UNC"},
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/edt%20unc.webp", "alt": "App"}
+    ],
+    "links": [
+      {"href": "https://github.com/TooFuW/appli_edt_univ", "text": "Github"},
+      {"href": "https://play.google.com/store/apps/details?id=nc.edt_unc.appli_edt_univ", "text": "Play Store"},
+      {"href": "https://toofuw.github.io/appli_edt_univ/", "text": "Online version", "suffix": " (for Apple users mainly)"}
+    ]
+  },
+  {
+    "id": "shortmoji",
+    "tooltip": "ShortMoji",
+    "title": "ShortMoji",
+    "tech": [
+      {"tooltip": "Python", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png", "alt": "python"}
+    ],
+    "bullets": [
+      "Created a lightweight <b>Python</b> program to insert emojis and special characters anywhere with simple keyboard shortcuts.",
+      "Featuring <b>easy customization</b> with a JSON file and a <b>fast correction system</b> (to avoid blocking if the user makes a typo).",
+      "Designed the experience to mirror <b>Discord-style</b> emoji shortcut across the whole computer."
+    ],
+    "media": [
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/ShortMoji/main/img/icon.png", "alt": "ShortMoji"},
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/ShortMoji/main/img/ShortMojiGif.gif", "alt": "ShortMoji"}
+    ],
+    "links": [
+      {"href": "https://github.com/TooFuW/ShortMoji", "text": "Github"}
+    ]
+  },
+  {
+    "id": "emailtracker",
+    "tooltip": "EmailTracker",
+    "title": "EmailTracker",
+    "tech": [
+      {"tooltip": "NodeJS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nodejs%20logo.svg", "alt": "nodejs"},
+      {"tooltip": "JavaScript", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/javascript%20logo.png", "alt": "javascript"},
+      {"tooltip": "HTML", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/html%20logo.png", "alt": "html"},
+      {"tooltip": "CSS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/css%20logo.png", "alt": "css"}
+    ],
+    "bullets": [
+      "Built a self-hosted <b>email tracking</b> system using an invisible 1x1 pixel image embedded in emails to record open counts and timestamps.",
+      "Developed a <b>Node.js/Express</b> backend with REST API, API key authentication and rate limiting, with HTTPS support.",
+      "Created a <b>Chrome extension</b> to generate tracking pixels, view analytics, and integrate directly into <b>ProtonMail</b> and <b>Gmail</b> composers."
+    ],
+    "media": [
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/EmailTracker/main/extension/images/icon-128.png", "alt": "EmailTracker"}
+    ],
+    "links": [
+      {"href": "https://github.com/TooFuW/EmailTracker", "text": "Github"}
+    ]
+  },
+  {
+    "id": "discord-ai-bot",
+    "tooltip": "Discord AI Bot",
+    "title": "Discord AI Bot",
+    "tech": [
+      {"tooltip": "Python", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png", "alt": "python"}
+    ],
+    "bullets": [
+      "Built an <b>AI-powered Discord bot</b> that engages in conversations, responds to mentions, and participates randomly in discussions.",
+      "Supports two AI backends - <b>Groq</b> (cloud) or <b>Ollama</b> (local) - with automatic fallback when rate limits occur.",
+      "Features customizable <b>AI personalities</b> per server, conversation history tracking, and moderation actions (user timeouts)."
+    ],
+    "media": [],
+    "links": [
+      {"href": "https://github.com/TooFuW/discord_ai_bot", "text": "Github"}
+    ]
+  },
+  {
+    "id": "chesscomhelper",
+    "tooltip": "ChessCom Helper",
+    "title": "ChessComHelper",
+    "tech": [
+      {"tooltip": "JavaScript", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/javascript%20logo.png", "alt": "javascript"},
+      {"tooltip": "HTML", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/html%20logo.png", "alt": "html"},
+      {"tooltip": "CSS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/css%20logo.png", "alt": "css"}
+    ],
+    "bullets": [
+      "Developed a <b>Chrome extension</b> that automatically highlights threatened pieces on <a target=\"_blank\" href=\"https://www.chess.com/\">chess.com</a>.",
+      "Shows <b>instant alerts</b> for pieces under attack and reveals weak or unprotected positions.",
+      "Helps players <b>reduce blunders</b> and perform <b>faster board evaluations</b> (educational purpose only 🤓)."
+    ],
+    "media": [
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/ChromeExtension_ChessComHelper/main/images/example.png", "alt": "ChessComHelper"}
+    ],
+    "links": [
+      {"href": "https://github.com/TooFuW/ChromeExtension_ChessComHelper/", "text": "Github"}
+    ]
+  },
+  {
+    "id": "robot-rover",
+    "tooltip": "Robot ROVER",
+    "title": "School Project - Robot ROVER",
+    "tech": [
+      {"tooltip": "Arduino", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/arduino%20logo.svg", "alt": "arduino"}
+    ],
+    "bullets": [
+      "Designed a tracked rover robot driven via <b>Bluetooth</b> from a mobile app.",
+      "Programmed <b>Arduino</b> with motor shields to control the rover's movement."
+    ],
+    "media": [
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/rover.jpg", "alt": "Rover"},
+      {"type": "video", "poster": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/rover%20poster.jpg", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/rover%20video.mov", "mime": "video/quicktime", "fallback": "Your browser does not support the video tag."}
+    ]
+  },
+  {
+    "id": "portfolio",
+    "tooltip": "Portfolio",
+    "title": "Portfolio",
+    "tech": [
+      {"tooltip": "HTML", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/html%20logo.png", "alt": "html"},
+      {"tooltip": "CSS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/css%20logo.png", "alt": "css"},
+      {"tooltip": "Javascript", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/javascript%20logo.png", "alt": "javascript"}
+    ],
+    "bullets": [
+      "I built this portfolio by hand to practice my <b>HTML</b>, <b>CSS</b> and <b>JavaScript</b> vanilla skills.",
+      "The goal of this project was to <b>challenge myself</b> creatively and to <b>showcase my work</b> in a clean way while using AI as little as possible to keep it personal.",
+      "I showcase in this portfolio <b>my favorite and biggest projects</b> but you can find more mini projects on my Github !"
+    ],
+    "media": [],
+    "links": [
+      {"href": "https://github.com/TooFuW/toofuw.github.io", "text": "Github"}
+    ]
+  }
+]

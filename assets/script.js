@@ -7,7 +7,47 @@ window.scrollTo(0, 0);
 // Visit counter
 fetch('https://portfolio.eyrianmuet.workers.dev/?url=https://api.bonus.nc:443/API/pingO');
 
-window.addEventListener("DOMContentLoaded", () => {
+function renderProjects(projects) {
+    const container = document.getElementById('projects-container');
+    container.innerHTML = projects.map(p => {
+        const techItems = p.tech.map(t =>
+            `<li data-tooltip="${t.tooltip}"><img src="${t.src}" alt="${t.alt}" loading="lazy"></li>`
+        ).join('');
+
+        const bullets = p.bullets.map(b => `<li>${b}</li>`).join('');
+
+        const mediaItems = p.media.map(m => {
+            if (m.type === 'img') {
+                return `<img src="${m.src}" alt="${m.alt}" loading="lazy">`;
+            }
+            return `<div class="project_video"><video muted preload="auto" autoplay loop poster="${m.poster}"><source src="${m.src}" type="${m.mime}">${m.fallback}</video></div>`;
+        }).join('');
+
+        const linksHTML = p.links
+            ? p.links.map(l => `<a target="_blank" href="${l.href}">${l.text}</a>${l.suffix || ''}`).join('')
+            : '';
+        const linksDiv = p.links ? `<div class="project_links">${linksHTML}</div>` : '';
+
+        return `<div class="bloc project" id="${p.id}" data-tooltip="${p.tooltip}">
+            <div class="project_container">
+                <div class="project_content reveal">
+                    <h2>${p.title}</h2>
+                    <ul class="tech_used">${techItems}</ul>
+                    <ul class="reveal">${bullets}</ul>
+                </div>
+                <div class="project_ressources reveal">
+                    <div class="project_image">${mediaItems}</div>
+                    ${linksDiv}
+                </div>
+            </div>
+        </div>`;
+    }).join('');
+}
+
+window.addEventListener("DOMContentLoaded", async () => {
+    const lang = document.documentElement.lang === 'fr' ? 'fr' : 'en';
+    const projects = await fetch(`./assets/projects.${lang}.json`).then(r => r.json());
+    renderProjects(projects);
 	// Get the total unique visitor count
 	const visitCountValue = document.querySelector('#visit_count_value');
 	fetch('https://portfolio.eyrianmuet.workers.dev/?url=https://api.bonus.nc:443/API/pingStatsO')
