@@ -10,7 +10,7 @@
     ],
     "bullets": [
       "Projet débuté dans le cadre du programme <b>Pépite Nouvelle Calédonie</b>, où un ami et moi concevons un système qui centralise les cartes de fidélité et les offres en Nouvelle-Calédonie.",
-      "Nous développons une application mobile multiplateforme avec <b>Flutter</b>, un backoffice web avec <b>NextJS</b>, un backend <b>NodeJS</b> et un site vitrine.",
+      "Nous développons une application mobile Android et iOS avec <b>Flutter</b>, un backoffice web avec <b>Refine</b>, un backend <b>NodeJS/Express</b> et un site vitrine avec <b>NextJS</b>.",
       "Le programme Pépite nous a apporté un accompagnement ciblé sur la <b>conception de business models</b>, la <b>préparation de business plans</b> et plus largement, les <b>fondamentaux de l'entrepreneuriat</b>.",
       "Après une année de travail, nous sommes devenus <b>lauréats du Prix Pépite</b> et avons obtenu la <b>4ème place</b>."
     ],

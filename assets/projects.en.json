@@ -10,7 +10,7 @@
     ],
     "bullets": [
       "Project started within the <b>Pépite Nouvelle Calédonie</b> program, where a friend and I are building a system that centralizes loyalty cards and offers in New Caledonia.",
-      "We are building a multiplatform mobile app with <b>Flutter</b>, a web backoffice with <b>NextJS</b>, a <b>NodeJS</b> backend, and a landing page.",
+      "We are building a mobile app for Android and iOS with <b>Flutter</b>, a web backoffice with <b>Refine</b>, a <b>NodeJS/Express</b> backend, and a landing page with <b>NextJS</b>.",
       "The Pépite program provided targeted mentorship in <b>business model design</b>, <b>business planning</b>, and key <b>entrepreneurship fundamentals</b>.",
       "After a year of work, we became <b>Pépite Prize laureates</b>, earning <b>4th place</b>."
     ],
