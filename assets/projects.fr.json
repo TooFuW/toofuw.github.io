@@ -237,7 +237,7 @@
     "bullets": [
       "Bot Discord propulsé par l'<b>IA</b> qui participe aux conversations, répond aux mentions et intervient aléatoirement dans les discussions.",
       "Supporte deux backends IA - <b>Groq</b> (cloud) ou <b>Ollama</b> (local) - avec basculement automatique en cas de limite de débit.",
-      "Personnalités IA <b>personnalisables</b> par serveur, suivi de l'historique des conversations et actions de modération (timeout utilisateurs)."
+      "Personnalités IA <b>personnalisables</b> par serveur, suivi de l'historique des conversations et actions de modération (timeout utilisateurs et renommage)."
     ],
     "media": [],
     "links": [

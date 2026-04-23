@@ -237,7 +237,7 @@
     "bullets": [
       "Built an <b>AI-powered Discord bot</b> that engages in conversations, responds to mentions, and participates randomly in discussions.",
       "Supports two AI backends - <b>Groq</b> (cloud) or <b>Ollama</b> (local) - with automatic fallback when rate limits occur.",
-      "Features customizable <b>AI personalities</b> per server, conversation history tracking, and moderation actions (user timeouts)."
+      "Features customizable <b>AI personalities</b> per server, conversation history tracking, and moderation actions (user timeouts and renames)."
     ],
     "media": [],
     "links": [
