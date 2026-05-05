@@ -10,9 +10,9 @@
     ],
     "bullets": [
       "Project started within the <b>Pépite Nouvelle Calédonie</b> program, where a friend and I are building a system that centralizes loyalty cards and offers in New Caledonia.",
-      "We are building a mobile app for Android and iOS with <b>Flutter</b>, a web backoffice with <b>Refine</b>, a <b>NodeJS/Express</b> backend, and a landing page with <b>NextJS</b>.",
-      "The Pépite program provided targeted mentorship in <b>business model design</b>, <b>business planning</b>, and key <b>entrepreneurship fundamentals</b>.",
-      "After a year of work, we became <b>Pépite Prize laureates</b>, earning <b>4th place</b>."
+      "Mobile app for Android and iOS with <b>Flutter</b>, web backoffice with <b>Refine</b>, <b>NodeJS/Express</b> backend, and landing page with <b>NextJS</b>.",
+      "The Pépite program provided mentorship in <b>business model design</b>, <b>business planning</b>, and <b>entrepreneurship fundamentals</b>.",
+      "After a year of work, we became <b>Pépite Prize laureates</b> (<b>4th place</b>)."
     ],
     "media": [
       {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/pepite.jpg", "alt": "Pépite Logo"},
@@ -56,14 +56,15 @@
     "tech": [
       {"tooltip": "Shopify", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/shopify%20logo.png", "alt": "shopify"},
       {"tooltip": "Wordpress", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/wordpress%20logo.png", "alt": "wordpress"},
-      {"tooltip": "Python", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png", "alt": "python"}
+      {"tooltip": "Python", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png", "alt": "python"},
+      {"tooltip": "Canva", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/canva%20logo.png", "alt": "canva"}
     ],
     "bullets": [
-      "Built <b>PacificSecurite</b> (Shopify e-commerce for security equipment) and <b>Videosafe</b> (Wordpress site for video storage services).",
-      "Integrated an AI chatbot with <b>Tidio</b> for automated customer support (PacificSecurite).",
-      "Deployed <b>Synchroteam</b> (tool selection, implementation and staff training).",
-      "Developed a <b>Python (Tkinter)</b> app using the <b>Synchroteam API</b> to automate technician tasks.",
-      "Set up a <b>Dahua server</b> to configure the video surveillance storage system."
+      "Built <b>PacificSecurite</b> (Shopify, security equipment) and <b>Videosafe</b> (Wordpress, video storage services), including their logos.",
+      "Integrated an AI chatbot (<b>Tidio</b>) for automated customer support.",
+      "Deployed <b>Synchroteam</b>: tool selection, implementation and staff training.",
+      "Developed a <b>Python (Tkinter)</b> app via the <b>Synchroteam API</b> to automate task creation.",
+      "Set up a <b>Dahua server</b> for the video surveillance storage."
     ],
     "media": [
       {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/batitech.jpg", "alt": "Batitech"},
@@ -88,7 +89,7 @@
       {"tooltip": "Shopify", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/shopify%20logo.png", "alt": "shopify"}
     ],
     "bullets": [
-      "Built a <b>Shopify</b> storefront for fantasy-themed products with straightforward browsing and checkout."
+      "Built a <b>Shopify</b> storefront for fantasy-themed products."
     ],
     "media": [
       {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/akos%20logo.webp", "alt": "AKOS"},
@@ -167,7 +168,7 @@
       {"tooltip": "Flutter", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/flutter%20logo.png", "alt": "flutter"}
     ],
     "bullets": [
-      "Built a <b>Flutter</b> app to consult University of New Caledonia timetables directly from the official <b>ICS</b> files (the official website is way too slow and a bit ugly).",
+      "Built a <b>Flutter</b> app to consult University of New Caledonia timetables directly from the official <b>ICS</b> files (the official website is slow and doesn't offer an offline version).",
       "Includes useful features such as an <b>offline mode</b>, a <b>multi-account</b> system, and support for <b>swipe gestures</b>.",
       "Application published on the <b>Google Play Store</b> and <b>available online</b>."
     ],
@@ -236,7 +237,7 @@
     ],
     "bullets": [
       "Built an <b>AI-powered Discord bot</b> that engages in conversations, responds to mentions, and participates randomly in discussions.",
-      "Supports two AI backends - <b>Groq</b> (cloud) or <b>Ollama</b> (local) - with automatic fallback when rate limits occur.",
+      "Supports two AI backends (<b>Groq</b> in cloud or <b>Ollama</b> locally) with automatic fallback when rate limits occur.",
       "Features customizable <b>AI personalities</b> per server, conversation history tracking, and moderation actions (user timeouts and renames)."
     ],
     "media": [],

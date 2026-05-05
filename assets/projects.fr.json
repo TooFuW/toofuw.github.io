@@ -9,10 +9,10 @@
       {"tooltip": "NodeJS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nodejs%20logo.svg", "alt": "nodejs"}
     ],
     "bullets": [
-      "Projet débuté dans le cadre du programme <b>Pépite Nouvelle Calédonie</b>, où un ami et moi concevons un système qui centralise les cartes de fidélité et les offres en Nouvelle-Calédonie.",
-      "Nous développons une application mobile Android et iOS avec <b>Flutter</b>, un backoffice web avec <b>Refine</b>, un backend <b>NodeJS/Express</b> et un site vitrine avec <b>NextJS</b>.",
-      "Le programme Pépite nous a apporté un accompagnement ciblé sur la <b>conception de business models</b>, la <b>préparation de business plans</b> et plus largement, les <b>fondamentaux de l'entrepreneuriat</b>.",
-      "Après une année de travail, nous sommes devenus <b>lauréats du Prix Pépite</b> et avons obtenu la <b>4ème place</b>."
+      "Projet dans le cadre du programme <b>Pépite Nouvelle Calédonie</b>, où un ami et moi concevons un système de centralisation des cartes de fidélité et des offres en Nouvelle-Calédonie.",
+      "Application mobile Android et iOS avec <b>Flutter</b>, backoffice web avec <b>Refine</b>, backend <b>NodeJS/Express</b> et site vitrine avec <b>NextJS</b>.",
+      "Le programme Pépite nous a apporté un accompagnement sur la <b>conception de business models</b>, la <b>préparation de business plans</b> et les <b>fondamentaux de l'entrepreneuriat</b>.",
+      "Après une année de travail, nous sommes devenus <b>lauréats du Prix Pépite</b> (<b>4ème place</b>)."
     ],
     "media": [
       {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/pepite.jpg", "alt": "Logo Pépite"},
@@ -56,14 +56,15 @@
     "tech": [
       {"tooltip": "Shopify", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/shopify%20logo.png", "alt": "shopify"},
       {"tooltip": "Wordpress", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/wordpress%20logo.png", "alt": "wordpress"},
-      {"tooltip": "Python", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png", "alt": "python"}
+      {"tooltip": "Python", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/python%20logo.png", "alt": "python"},
+      {"tooltip": "Canva", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/canva%20logo.png", "alt": "canva"}
     ],
     "bullets": [
-      "Création de <b>PacificSecurite</b> (boutique en ligne Shopify pour du matériel de sécurité) et de <b>Videosafe</b> (site Wordpress pour des services de stockage vidéo).",
-      "Intégration d'un chatbot IA avec <b>Tidio</b> pour le support client automatisé (PacificSecurite).",
-      "Déploiement de <b>Synchroteam</b> (recherche de solution, mise en place et formation du personnel).",
-      "Développement d'une application <b>Python (Tkinter)</b> utilisant l'<b>API Synchroteam</b> pour automatiser la création de tâches pour les techniciens.",
-      "Mise en place d'un <b>serveur Dahua</b> pour préparer et configurer le stockage de la vidéosurveillance."
+      "Création de <b>PacificSecurite</b> (Shopify, matériel de sécurité) et <b>Videosafe</b> (Wordpress, services de stockage vidéo), incluant leurs logos.",
+      "Intégration d'un chatbot IA (<b>Tidio</b>) pour le support client automatisé.",
+      "Déploiement de <b>Synchroteam</b> : recherche de solution, mise en place et formation du personnel.",
+      "Développement d'une application <b>Python (Tkinter)</b> via l'<b>API Synchroteam</b> pour automatiser la création de tâches.",
+      "Mise en place d'un <b>serveur Dahua</b> pour le stockage de la vidéosurveillance."
     ],
     "media": [
       {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/batitech.jpg", "alt": "Batitech"},
@@ -88,7 +89,7 @@
       {"tooltip": "Shopify", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/shopify%20logo.png", "alt": "shopify"}
     ],
     "bullets": [
-      "Création d'une boutique <b>Shopify</b> pour des produits sur le thème de la fantasy, avec une navigation simple et un parcours d'achat fluide."
+      "Création d'une boutique <b>Shopify</b> pour des produits sur le thème de la fantasy."
     ],
     "media": [
       {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/akos%20logo.webp", "alt": "AKOS"},
@@ -167,7 +168,7 @@
       {"tooltip": "Flutter", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/flutter%20logo.png", "alt": "flutter"}
     ],
     "bullets": [
-      "Développement d'une application <b>Flutter</b> pour consulter les EDT de l'Université de la Nouvelle-Calédonie directement à partir des fichiers <b>ICS</b> officiels (le site officiel quant à lui est bien trop lent et pas très beau).",
+      "Développement d'une application <b>Flutter</b> pour consulter les EDT de l'Université de la Nouvelle-Calédonie directement à partir des fichiers <b>ICS</b> officiels (le site officiel est lent et ne propose pas de version hors-ligne).",
       "Inclut des fonctionnalités utiles comme un <b>mode hors ligne</b>, un système <b>multi-comptes</b> et la prise en charge des <b>gestes de naviguation</b>.",
       "Application publiée sur le <b>Google Play Store</b> et également <b>disponible en ligne</b>."
     ],
@@ -236,7 +237,7 @@
     ],
     "bullets": [
       "Bot Discord propulsé par l'<b>IA</b> qui participe aux conversations, répond aux mentions et intervient aléatoirement dans les discussions.",
-      "Supporte deux backends IA - <b>Groq</b> (cloud) ou <b>Ollama</b> (local) - avec basculement automatique en cas de limite de débit.",
+      "Supporte deux backends IA (<b>Groq</b> en cloud ou <b>Ollama</b> en local) avec basculement automatique en cas de limite de débit.",
       "Personnalités IA <b>personnalisables</b> par serveur, suivi de l'historique des conversations et actions de modération (timeout utilisateurs et renommage)."
     ],
     "media": [],
