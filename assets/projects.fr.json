@@ -64,6 +64,7 @@
       "Intégration d'un chatbot IA (<b>Tidio</b>) pour le support client automatisé.",
       "Déploiement de <b>Synchroteam</b> : recherche de solution, mise en place et formation du personnel.",
       "Développement d'une application <b>Python (Tkinter)</b> via l'<b>API Synchroteam</b> pour automatiser la création de tâches.",
+      "Développement d'un outil <b>Python</b> via l'<b>API Synchroteam</b> pour générer et imprimer les rapports d'intervention des techniciens.",
       "Mise en place d'un <b>serveur Dahua</b> pour le stockage de la vidéosurveillance."
     ],
     "media": [
@@ -77,6 +78,7 @@
       {"href": "https://www.facebook.com/BatitechNouvelleCaledonie", "text": "Batitech"},
       {"href": "https://videosafe.pacificsecurite.nc/", "text": "VideoSafe"},
       {"href": "https://github.com/TooFuW/Batitech", "text": "Batitech App"},
+      {"href": "https://github.com/TooFuW/batitech_synchroteam_printer", "text": "Synchroteam Printer"},
       {"href": "https://www.synchroteam.com/", "text": "Synchroteam"},
       {"href": "https://pacificsecurite.nc/", "text": "PacificSecurite"}
     ]
