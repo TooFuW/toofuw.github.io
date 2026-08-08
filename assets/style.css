@@ -259,6 +259,7 @@ body {
 /* About and skills */
 #about {
     background-color: #ffeaa7;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #about,
@@ -269,7 +270,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     border-top: 1px solid #000000;
 }
 
@@ -785,27 +785,16 @@ body.lightbox-open {
 }
 
 /* Project specific color codes */
-#pepite,
-#akos,
-#edt-unc,
-#chesscomhelper {
+.project:nth-child(4n+1) {
     background-color: #a5c8ff;
 }
-#internlafabrik,
-#final-uni-project,
-#shortmoji,
-#robot-rover {
+.project:nth-child(4n+2) {
     background-color: #f4b4b4;
 }
-#devlafabrik,
-#cassini-hackaton,
-#emailtracker,
-#portfolio {
+.project:nth-child(4n+3) {
     background-color: #ffeaa7;
 }
-#batitech,
-#hackagou,
-#discord-ai-bot {
+.project:nth-child(4n+4) {
     background-color: #c5f5d3;
 }
 
