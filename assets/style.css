@@ -64,9 +64,7 @@ body {
 
 .scroll-indicator-line::after {
     content: attr(data-tooltip);
-    white-space: normal;
-    word-break: keep-all;
-    overflow-wrap: break-word;
+    white-space: nowrap;
     position: absolute;
     bottom: -2px;
     left: 50%;
@@ -96,7 +94,7 @@ body {
 }
 
 .scroll-indicator-line:hover::after {
-    max-width: 9dvw;
+    max-width: 8dvw;
     max-height: 30px;
     border-radius: 5px;
     color: #000000;
@@ -788,25 +786,26 @@ body.lightbox-open {
 
 /* Project specific color codes */
 #pepite,
+#akos,
+#edt-unc,
+#chesscomhelper {
+    background-color: #a5c8ff;
+}
+#internlafabrik,
 #final-uni-project,
 #shortmoji,
 #robot-rover {
-    background-color: #a5c8ff;
+    background-color: #f4b4b4;
 }
-#lafabrik,
+#devlafabrik,
 #cassini-hackaton,
 #emailtracker,
 #portfolio {
-    background-color: #f4b4b4;
+    background-color: #ffeaa7;
 }
 #batitech,
 #hackagou,
 #discord-ai-bot {
-    background-color: #ffeaa7;
-}
-#akos,
-#edt-unc,
-#chesscomhelper {
     background-color: #c5f5d3;
 }
 

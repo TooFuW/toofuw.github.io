@@ -26,8 +26,8 @@
     ]
   },
   {
-    "id": "lafabrik",
-    "tooltip": "La Fabrik",
+    "id": "internlafabrik",
+    "tooltip": "Internship - La Fabrik",
     "title": "Internship - La Fabrik",
     "tech": [
       {"tooltip": "NextJS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nextjs%20logo.png", "alt": "nextjs"}
@@ -50,6 +50,26 @@
     ]
   },
   {
+    "id": "devlafabrik",
+    "tooltip": "Developer - La Fabrik",
+    "title": "Developer - La Fabrik",
+    "tech": [
+      {"tooltip": "NextJS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nextjs%20logo.png", "alt": "nextjs"},
+      {"tooltip": "Tailwind", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/tailwind%20logo.svg", "alt": "tailwind"}
+    ],
+    "bullets": [
+      "Returned to <b>La Fabrik</b> as a <b>Junior Developer</b> on a full-time contract after my previous internship at the company.",
+      "Building a <b>maritime ticketing website</b> for the <b>Province Nord of New Caledonia</b>, from specifications and under the supervision of the lead developer.",
+      "Contributing to the <b>technical documentation</b> of the developments delivered."
+    ],
+    "media": [
+      {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/lafabrik%20logo.svg", "alt": "La Fabrik"}
+    ],
+    "links": [
+      {"href": "https://www.la-fabrik.nc/", "text": "La Fabrik"}
+    ]
+  },
+  {
     "id": "batitech",
     "tooltip": "Batitech",
     "title": "Batitech",
@@ -61,11 +81,11 @@
     ],
     "bullets": [
       "Built <b>PacificSecurite</b> (Shopify, security equipment) and <b>Videosafe</b> (Wordpress, video storage services), including their logos.",
-      "Integrated an AI chatbot (<b>Tidio</b>) for automated customer support.",
       "Deployed <b>Synchroteam</b>: tool selection, implementation and staff training.",
       "Developed a <b>Python (Tkinter)</b> app via the <b>Synchroteam API</b> to automate task creation.",
       "Developed a <b>Python</b> tool via the <b>Synchroteam API</b> to generate and print technician intervention reports.",
-      "Set up a <b>Dahua server</b> for the video surveillance storage."
+      "Set up a <b>Dahua server</b> for the video surveillance storage.",
+      "Set up <b>Claude Cowork</b> with custom skills to help the secretary."
     ],
     "media": [
       {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/batitech.jpg", "alt": "Batitech"},
@@ -74,13 +94,12 @@
       {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/batitech%20app.png", "alt": "App"}
     ],
     "links": [
-      {"href": "https://www.tidio.com/", "text": "Tidio"},
       {"href": "https://www.facebook.com/BatitechNouvelleCaledonie", "text": "Batitech"},
       {"href": "https://videosafe.pacificsecurite.nc/", "text": "VideoSafe"},
       {"href": "https://github.com/TooFuW/Batitech", "text": "Batitech App"},
-      {"href": "https://github.com/TooFuW/batitech_synchroteam_printer", "text": "Synchroteam Printer"},
       {"href": "https://www.synchroteam.com/", "text": "Synchroteam"},
-      {"href": "https://pacificsecurite.nc/", "text": "PacificSecurite"}
+      {"href": "https://pacificsecurite.nc/", "text": "PacificSecurite"},
+      {"href": "https://github.com/TooFuW/batitech_synchroteam_printer", "text": "Synchroteam Printer"}
     ]
   },
   {
@@ -240,7 +259,8 @@
     "bullets": [
       "Built an <b>AI-powered Discord bot</b> that engages in conversations, responds to mentions, and participates randomly in discussions.",
       "Supports two AI backends (<b>Groq</b> in cloud or <b>Ollama</b> locally) with automatic fallback when rate limits occur.",
-      "Features customizable <b>AI personalities</b> per server, conversation history tracking, and moderation actions (user timeouts and renames)."
+      "Features customizable <b>AI personalities</b> per server, conversation history tracking, and moderation actions (user timeouts and renames).",
+      "<b>CLI interface</b> to take control of the bot, sending messages, replies and reactions in its place."
     ],
     "media": [],
     "links": [
