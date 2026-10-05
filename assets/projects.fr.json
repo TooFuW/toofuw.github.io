@@ -1,17 +1,18 @@
 [
   {
-    "id": "pepite",
-    "tooltip": "Pépite",
-    "title": "Pépite - Projet BONUS",
+    "id": "bonus",
+    "tooltip": "Bonus (O&B)",
+    "title": "Cofondateur - Bonus (O&B)",
     "tech": [
       {"tooltip": "Flutter", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/flutter%20logo.png", "alt": "flutter"},
       {"tooltip": "NextJS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nextjs%20logo.png", "alt": "nextjs"},
       {"tooltip": "NodeJS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nodejs%20logo.svg", "alt": "nodejs"}
     ],
     "bullets": [
-      "Projet dans le cadre du programme <b>Pépite Nouvelle Calédonie</b>, où un ami et moi concevons un système de centralisation des cartes de fidélité et des offres en Nouvelle-Calédonie.",
+      "Lancement de <b>Bonus</b> et création de la société <b>O&B</b> (oct. 2026), en binôme avec Thimotée Viret.",
+      "Bonus centralise les <b>cartes de fidélité</b> et les <b>offres</b> des commerçants de Nouvelle-Calédonie.",
       "Application mobile Android et iOS avec <b>Flutter</b>, backoffice web avec <b>Refine</b>, backend <b>NodeJS/Express</b> et site vitrine avec <b>NextJS</b>.",
-      "Le programme Pépite nous a apporté un accompagnement sur la <b>conception de business models</b>, la <b>préparation de business plans</b> et les <b>fondamentaux de l'entrepreneuriat</b>.",
+      "Projet né dans le cadre du programme <b>Pépite Nouvelle Calédonie</b>, qui nous a accompagnés sur la <b>conception de business models</b>, la <b>préparation de business plans</b> et les <b>fondamentaux de l'entrepreneuriat</b>.",
       "Après une année de travail, nous sommes devenus <b>lauréats du Prix Pépite</b> (<b>4ème place</b>)."
     ],
     "media": [
@@ -21,6 +22,7 @@
       {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/bonus%20backoffice.webp", "alt": "Backoffice"}
     ],
     "links": [
+      {"href": "https://ob.nc/", "text": "O&B"},
       {"href": "https://bonus.nc/", "text": "Bonus"},
       {"href": "https://pepite.unc.nc/", "text": "Pépite Nouvelle Calédonie"}
     ]
@@ -169,10 +171,11 @@
     "title": "Hackagou",
     "tech": [],
     "bullets": [
-      "Hackagou est une compétition <b>CTF</b> en équipe, organisée chaque année en Nouvelle-Calédonie.",
-      "Édition 2023 : <b>6ème place</b> dans la catégorie étudiants.",
+      "Hackagou est une compétition <b>CTF</b> sur le thème de la cybersécurité en équipe, organisée chaque année en Nouvelle-Calédonie.",
+      "Édition 2026 : <b>3ème place au classement général</b>, professionnels et étudiants confondus, et <b>première équipe non professionnelle</b>. Notre meilleur résultat après 4 ans de participation.",
+      "Édition 2025 : <b>en tête de la catégorie étudiants</b> du début à la fin et <b>presque ex-æquo avec la première équipe professionnelle</b>.",
       "Édition 2024 : <b>4ème place</b> dans la catégorie étudiants et <b>premiers à trouver le flag le plus difficile</b> toutes catégories confondues (professionnels et étudiants).",
-      "Édition 2025 : <b>en tête de la catégorie étudiants</b> du début à la fin et <b>presque ex-æquo avec la première équipe professionnelle</b>."
+      "Édition 2023 : <b>6ème place</b> dans la catégorie étudiants."
     ],
     "media": [
       {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/hackagou.png", "alt": "Hackagou"}

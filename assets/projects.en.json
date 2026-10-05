@@ -1,17 +1,18 @@
 [
   {
-    "id": "pepite",
-    "tooltip": "Pépite",
-    "title": "Pépite - BONUS Project",
+    "id": "bonus",
+    "tooltip": "Bonus (O&B)",
+    "title": "Co-founder - Bonus (O&B)",
     "tech": [
       {"tooltip": "Flutter", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/flutter%20logo.png", "alt": "flutter"},
       {"tooltip": "NextJS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nextjs%20logo.png", "alt": "nextjs"},
       {"tooltip": "NodeJS", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/nodejs%20logo.svg", "alt": "nodejs"}
     ],
     "bullets": [
-      "Project started within the <b>Pépite Nouvelle Calédonie</b> program, where a friend and I are building a system that centralizes loyalty cards and offers in New Caledonia.",
+      "Launched <b>Bonus</b> and founded the company <b>O&B</b> (Oct. 2026) with Thimotée Viret.",
+      "Bonus centralizes the <b>loyalty cards</b> and <b>offers</b> of New Caledonian retailers.",
       "Mobile app for Android and iOS with <b>Flutter</b>, web backoffice with <b>Refine</b>, <b>NodeJS/Express</b> backend, and landing page with <b>NextJS</b>.",
-      "The Pépite program provided mentorship in <b>business model design</b>, <b>business planning</b>, and <b>entrepreneurship fundamentals</b>.",
+      "The project started within the <b>Pépite Nouvelle Calédonie</b> program, which provided mentorship in <b>business model design</b>, <b>business planning</b>, and <b>entrepreneurship fundamentals</b>.",
       "After a year of work, we became <b>Pépite Prize laureates</b> (<b>4th place</b>)."
     ],
     "media": [
@@ -21,6 +22,7 @@
       {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/bonus%20backoffice.webp", "alt": "Backoffice"}
     ],
     "links": [
+      {"href": "https://ob.nc/", "text": "O&B"},
       {"href": "https://bonus.nc/", "text": "Bonus"},
       {"href": "https://pepite.unc.nc/", "text": "Pépite Nouvelle Calédonie"}
     ]
@@ -169,10 +171,11 @@
     "title": "Hackagou",
     "tech": [],
     "bullets": [
-      "Hackagou is a yearly team <b>CTF competition</b> in New Caledonia.",
-      "2023 edition: placed <b>6th</b> in the student category.",
+      "Hackagou is a yearly team <b>CTF competition</b> on the theme of cybersecurity, held in New Caledonia.",
+      "2026 edition: placed <b>3rd overall</b>, professionals and students combined, and <b>first non-professional team</b>. Our best result after 4 years of taking part.",
+      "2025 edition: <b>led the student category</b> throughout and finished <b>almost ex-æquo with the first professional team</b>.",
       "2024 edition: placed <b>4th</b> in the student category and <b>found the hardest flag first</b> across all categories (professionals and students).",
-      "2025 edition: <b>led the student category</b> throughout and finished <b>almost ex-æquo with the first professional team</b>."
+      "2023 edition: placed <b>6th</b> in the student category."
     ],
     "media": [
       {"type": "img", "src": "https://raw.githubusercontent.com/TooFuW/toofuw.github.io/main/assets/images/hackagou.png", "alt": "Hackagou"}
